@@ -1,0 +1,418 @@
+---
+title: "Bibliographie_These_IRIV"
+author: "Sébastien HARSCOAT"
+date: "5 février 2018"
+
+#lang: french 
+fontsize: 12pt
+
+header-includes:
+- \usepackage[french]{babel}
+- \setlength\parindent{24pt}\setlength{\parskip}{0.0pt plus 1.0pt}
+- \usepackage{graphicx}
+- \usepackage{float}
+
+output:
+  pdf_document:
+    highlight: kate
+    fig_caption: yes
+    keep_tex: yes
+    number_sections: yes
+    toc: yes
+    latex_engine: pdflatex
+  html_document:
+    fig_caption: yes
+    toc: yes
+  word_document:
+    toc: yes
+    
+bibliography: biblio_these.bib
+csl: csl_fichier/ieee.csl
+# csl: csl_fichier/the-new-england-journal-of-medicine.csl       
+# csl: csl_fichier/annals-of-emergency-medicine.csl
+---
+
+
+
+```{r, results='hide',eval=FALSE, echo=FALSE}
+library(captioner)     
+```
+\pagebreak
+
+\listoffigures
+
+\pagebreak
+
+\listoftables
+
+\pagebreak
+
+
+
+
+# Introduction
+
+<p> Les pathologies respiratoires sont un motif fréquent consultation aux urgences et nécessitent, dans la majorité des cas, une hospitalisation dans un service pour la suite de la prise en charge. Une part importante de ces patients sont atteints de pathologies pulmonaires atteignant les voies de conduction respiratoire. La principale caractéristique de ces pathologies est de présenter un syndrome obstructif  par augmentation des résistances des bronchioles distales. Les deux pathologies les plus connues de cette famille sont  l’asthme et la Bronco-Pneumopathie Chronique Obstructive (BPCO) associée ou non à un emphysème. Ces deux pathologies sont responsables d’une morbi-mortalité importante avec pour conséquences de nombreuses hospitalisations pour décompensation aiguë. 
+Actuellement, il n’existe que deux moyens non invasifs de surveiller de façon continue une pathologie pulmonaire. Il s’agit de la saturation pulsée en oxygène (SpO2) et de la capnographie par lunettes nasales. 
+La capnographie est un monitoring en temps réel du CO2 expiré, disponible et facilement réalisable dans les services d’urgences. Des modifications de la courbe de capnographie sont décrites dans la littérature en association avec l’atteinte obstructive de certaines pathologies  comme l’asthme en rapport avec l’augmentation des résistances respiratoires. Cette approche descriptive ne permet pas d’objectiver quantitativement  les troubles respiratoires sous-jacents. Pour le moment, aucun système ne permet de quantifier les variations et les modifications de ces courbes de CO2 expiré.
+A ce jour, les seuls examens permettant d’apprécier les résistances des voies aériennes et par conséquent leurs modifications, sont les explorations fonctionnelles respiratoires (EFR) avec l’étude des volumes et des débits respiratoires, notamment lors de la spirométrie. Les EFR sont considérés comme étant les examens de référence dans la mesure précise et objective d’une obstruction bronchique surtout chez le sujet asthmatique et BPCO. La réalisation d’EFR comporte des contraintes matérielles et physiques qui rendent son utilisation difficile dans un contexte de pathologie aiguë chez un patient instable sur le plan respiratoire ou cardiologique et nécessitant souvent une oxygénothérapie. Par ailleurs, il s’agit souvent de patients âgés qui n’ont plus la capacité de se soumettre à ce type d’explorations, qui demandent de la coopération et la mobilisation de grands volumes pulmonaires. Dans ce contexte, l’utilisation de la capnographie permettrait une évaluation et une surveillance plus aisée de la fonctionnalité respiratoire. Peu d’études montrent l’existence d’une relation quantifiable entre les courbes de capnographie et les résultats des EFR.
+L’objectif de ce travail est  d’objectiver l’apport de la transformée en ondelettes sur l’analyse de la déformation de la courbe de capnographie permettant la distiction des patients pathologiques présentant un syndrome obstructif.
+Dans ce but, nous établiront dans un premier temps l’état des connaissances sur la technique de capnographie et particulièrement sur l’analyse de la courbe ainsi que de ses tentatives de modélisation. Puis nous développeront l’analyse du signal de capnographie par la transformée en ondelettes tout d’abord par une phase de simulation permettant d’observer le comportement de cette transformation en fonction de la déformation de la courbe. Nous terminerons par une phase expérimentale à l’aide de données de capnographie et de spirométrie recueillies sur des patients.<p>
+
+\pagebreak
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------
+
+
+# Première Partie - Pathologie Obstructive
+
+## Rappel d'Anatomie et de Physiologie Respiratoire
+
+
+## Maladie Obstructive
+
+
+\pagebreak
+
+
+
+
+------------------------------------------------------------------------------------------
+
+
+# Deuxième Partie - Modèle de Poumon
+
+
+
+
+\pagebreak
+
+
+------------------------------------------------------------------------------------------
+
+
+# Troisième Partie - Capnographie
+
+
+## Histoire de la capnographie
+En 1620, le chimiste belge Van Helmont décrit pour la première fois la molécule CO2. En 1754, le Dr Black publie dans sa thèse que le CO2 est expiré dans l’air.  Le CO2 est considéré comme toxique et mortel jusqu’en 1824. Il faudra attendre l’américain Henderson en 1925 pour démontrer l’intérêt physiologique du dioxyde de carbone dans le métabolisme. En 1928, le CO2 est associé aux narcotiniques dans les anesthésies humaines, mais les patients convulsaient au réveil, raison pour laquelle cette méthode a été abandonnée. Luft développe le principe de la capnométrie pendant la seconde guerre mondiale en partant du principe que le CO2 est un gaz qui absorbe les rayons infrarouges[@luft1943neue][@bhavani1992capnometry]. Il dépose deux brevets en 1943 pour des applications pratiques cliniques : usine de caoutchouc et surveillance environnementale dans les sous-marins. C’est en 1950 qu’Etan et Liston introduisent le concept de monitorage du CO2 expiré pendant l’anesthésie par absorption des infrarouges. Les rayons IR sont absorbés par tous les gaz composés de plus de deux atomes par molécule, ou par deux atomes différents lorsque la molécule est composée d’uniquement deux atomes. Cependant, à cause du poids, du volume et du coût, ces appareils ne sont pas utilisés en clinique courante. Puis une méthode de capnographie basée sur la spectrographie photoacoustique est développée au Danemark. Elle repose sur la détection au microphone des sons produits par la lumière pulsée en fonction des longueurs d’onde des IR. Le spectromètre de masse, basé sur la séparation des gaz en fonction de leur masse moléculaire, peut, de façon séquentielle, échantillonner tous les gaz inspirés et expirés. Au début du XXe siècle, les chercheurs ont exploré la nature de la courbe expiratoire du dioxyde de carbone, y compris les composants physiologiques comme l’espace mort et les gaz alvéolaires, autant par la méthode de capnographie standard (temporelle) qu’avec la capnographie volumétrique par échantillonnage séquentiel rapide du volume de gaz(1)[@aitken1928fluctuation]. Dans les années 1950 et les années 1960, les premières études ont examiné la forme de la courbe de capnographie normal et ont recherché aux niveaux du CO2 alvéolaire un modèle utilisant des équations de dilution dépendantes du temps (2)(3)[@chilton1952mathematical][@yamamoto1960mathematical]. Cependant, ce n'est qu'en attendant la disponibilité des systèmes commerciaux des analyseurs infrarouges rapides que la détermination de la pression partielle du dioxyde de carbone dans la respiration a pu passer du laboratoire de recherche de physiologie au « chevet » du patient(4)[@jaffe2008infrared]. Cette technologie a d'abord trouvé une application dans l'anesthésie et plus tard aux soins intensifs pour un nombre limité d’indications. Ce n’est que récemment que cette technologie a fait son apparition dans d’autre spécialité comme les urgences s’ouvrant à de nouvelles applications cliniques. C'est à la fin des années 1950 que les chercheurs ont commencé à appliquer des approches tout d’abord manuelles puis informatiques pour l'ajustement du dioxyde de carbone et l’étude des courbes d'écoulement. Ces courbes de CO2 en fonction du temps encore appelées capnographie standard et rapporté au volume expiré encore appelées capnographie volumétrique ont permis l'estimation de paramètres ventilatoires comme la PCO2 alvéolaire (5)[@bellville1959respiratory]. Ces travaux ont été initialement entrepris avec des méthodes manuelles consommant du temps (6)[@berengo1961single] puis ont été rapidement suivis par des méthodes analogiques (5)[@bellville1959respiratory], analogiques / numériques combinés (7)[@murphy1899analogue] et, plus tard, avec des données numériques coûteuses et complexes (8)[@noe1963computer].
+Les premiers capnographes s'appuyaient sur des méthodes électroniques analogiques pour déterminer les paramètres de la fréquence respiratoire (FR) et de la pression partielle de CO2. L'introduction du microprocesseur au début des années 1970 a conduit à des logiciels basés sur la mesure de la fréquence respiratoire et de la PETCO2, avec un fabricant intégrant le CO2 et le volume pour calculer la ventilation alvéolaire et l'élimination du dioxyde de carbone. Cependant, malgré le développement de technologie informatique pour identifier et classer les changements en temps réel du capnogramme dès la fin des années 1980 (9)(10)[@bao1992expert][@ventzas1994capnex], les algorithmes logiciels des dispositifs commerciaux ne permettent pas à l’heure actuelle l’analyse de la courbe en clinique courante. Ces dispositifs restent concentrés sur une estimation robuste du taux de CO2 en fin d’expiration (PETCO2) et de la fréquence respiratoire.
+
+
+## Technique d’enregistrement de capnographie 
+
+### Détection du CO2 expiré
+Il existe différents systèmes pour détecter et analyser le CO2 expiré.
+
+#### La spectrométrie de masse (11)[@bhavani1992capnometry]
+Elle est basée sur le concept de séparation des ions en fonction de leur poids moléculaire et de leur charge. Il existe deux types de spectromètre de masse, celui à secteur magnétique et détecteurs fixés et le quadripôle. Un champ électrique charge les molécules de gaz et les transforme en cations qui seront accélérées et analysées. Cette technique a pour avantages d’analyser plusieurs gaz en même temps, et voir le CO2 expiré de plusieurs patients en même temps dans différentes salles opératoires (maximum 31). Mais le spectromètre de masse est un appareil volumineux et cher qui ne trouve pas son utilité au pied du lit du malade. 
+      
+#### La spectrographie Raman
+Elle a été inventée en 1928 par Mr Raman. Un rayon laser d’argon monochromatique de haute intensité traverse un échantillon de gaz. Les molécules de gaz dispersent la lumière avec des longueurs d’ondes caractéristiques, qui sera collectée par des lentilles. Différents filtres sélectionnent alors la lumière en fonction des gaz mesurés. Le nombre « d’impacts » par 100 ms est utilisé pour déterminer la concentration des gaz. Cette technique permet une analyse multi gaz, rapide.
+
+#### Méthode colorimétrique 
+Il s’agit d’une méthode récente peu utilisée en raison de l’absence d’un monitoring continu et d’affichage graphique des variations de CO2. C’est un système qui détecte la présence de CO2 dans un gaz à l’aide d’un papier filtre ou un autre révélateur sensible au pH.
+
+####	La spectrophotométrie d’absorption infrarouge 
+La spectrophotométrie par rayonnement infrarouge (IR) est la technique de capnographie actuellement la plus utilisée en médecine (11)[@bhavani1992capnometry]. Un faisceau IR traverse un mélange gazeux, l’intensité de la lumière transmise est fonction de la longueur de la cellule d’absorption, de la pression partielle du gaz et de son coefficient d’absorption. Chaque gaz absorbe plus spécifiquement une longueur d’onde donnée, il est donc possible de mesurer l’absorption d’un gaz spécifique, qui sera proportionnelle à la concentration. Le CO2 absorbe les IR à une longueur d’onde de 4.3 µm. En comparant la différence d’absorption d’un rayonnement IR qui traverse deux cellules (une dont la concentration en CO2 est connue, l’autre dont la concentration reste à mesurer), il est possible de mesurer la concentration en CO2 du mélange. 
+
+
+### Système d’analyse de l’ETCO2
+On distingue deux types de système d’analyse de l’ETCO2 (12)[@yosefy2004end].
+
+#### Système non aspiratif : « Mainstream »
+Le système non aspiratif, mainstream, où la mesure est effectuée directement sur le flux gazeux du circuit respiratoire du patient, permet de fournir une analyse rapide et sans distorsion de la concentration en CO2. La mesure se fait en continu, sans décalage temporel. L’inconvénient de ce système réside dans le fait que le capteur alourdit le dispositif et risque de modifier la position de la sonde d’intubation chez les patients en ventilation invasive. 
+
+#### Système aspiratrif : « Sidestream »
+Le système sidestream est un système aspiratif où l’échantillon de gaz est aspiré à débit constant à travers un tube fin pour être analysé par une cellule de mesure. Le débit aspiratif est de 150ml/min. Il permet une analyse multi gaz en utilisant plusieurs longueurs d’ondes. Ce capnographe a l’avantage d’être léger mais les sécrétions pulmonaires et l’eau de condensation ont tendance à obstruer le tube d’analyse. Toute fuite sur le circuit provoque une aspiration d’air ambiant et crée une mesure anormalement basse du CO2 expiré. Par ailleurs, le délai d’analyse de l’ETCO2 est allongé.
+Les progrès technologiques ont permis de faire un système microstream, qui est un système aspiratif amélioré où le CO2 transite par une fine tubulure avant d’atteindre la chambre de mesure. Ce dispositif permet de diminuer le temps d’analyse et permet ainsi une synchronisation entre flux expiré et courbe capnographique.
+
+Actuellement les systèmes de mesure sont compacts, petits, légers et faciles d’utilisation. Pour une utilisation clinique, les capnomètres doivent pouvoir mesurer une concentration de CO2 dans une gamme de 0 à 10 % (76 mmHg). La précision avec un système IR est d’environ 0.2%, ce qui est suffisant en clinique. Les résultats sont faussés par la présence de protoxyde d’azote ou d’oxygène mais le système est conçu pour annuler automatiquement ces biais. Par ailleurs, les variations de température ambiante et de pression atmosphérique peuvent intervenir sur les résultats de concentration en CO2 notamment sur les systèmes sidestream.
+
+
+
+## Capnographie et pathologie respiratoire
+Il existe deux types de capnogrammes, soit il s’agit d’une mesure du CO2 expiré en fonction du temps (capnographie temporelle ou standard), soit les mesures sont réalisées en fonction du volume expiré (courbes SBT-CO2 ou capnogramme volumétrique).
+
+
+### La capnographie temporelle ou sandard
+Le terme « capnographie standard », c'est-à-dire la capnographie basé sur le temps, se réfère généralement au tracé du dioxyde de carbone en fonction du temps par opposition à la capnographie en fonction du volume expiré volumétrique appelé « capnographie volumétrique » où la phase inspiratoire de la courbe n’est pas représentée. Les deux formes d'onde sont subdivisées en trois phases expiratoires avec une quatrième inspiratoire pour la capnographie standard) (13)(14)[@jabre2010place][@howe2011use] _figure 1_:  
+
+- Phase I : appelée base inspiratoire, elle correspond à la vidange de l’espace mort anatomique, la pression partielle en CO2 est proche de 0 puisque le mélange gazeux de cet espace n’a pas été en contact avec les échanges gazeux alvéolaires. Sa composition est comparable à celle de l’air inspiré avec peu ou pas de CO2.
+- Phase II : de montée expiratoire, on observe une augmentation rapide du CO2 expiré, sous forme d’une courbe sigmoïde, correpsondant à la transition entre l'espace mort anatomique et l’arrivée des gaz alvéolaires. Durant cette étape, le gaz de l’espace mort anatomique est remplacé par le gaz alvéolaire. La verticalité de la phase II est en faveur d’une distinction nette entre l’espace mort anatomique et l’air alvéolaire. L’élimination de l’air alvéolaire est normalement synchrone, ce qui est prouvée par l’ascension soudaine de cette phase (14)[@howe2011use].
+- Phase III : on parle de plateau expiratoire, provenant de la vidange séquentielle des volumes alvéolaires, Elle correspond à l’expiration du CO2 provenant uniquement des alvéoles. Cette phase est en plateau voir légèrement ascendant et varie en fonction des pathologies respiratoires. Une majoration de la pente correspond à une vidange asynchrone des alvéoles lors de l’expiration, ce qui est visible dans les pathologies obstructives comme l’asthme et la BPCO. La fin du plateau correspond à la PETCO2, affichée sur les écrans de monitoring. La PETCO2 est un reflet de la pression artérielle en CO2 chez un sujet sain avec un métabolisme stable.
+- Phase 0 : c’est l’inspiration d’un gaz dépourvu de CO2 qui provoque une chute brutale du CO2 jusqu’à la ligne de base (c’est-à-dire 0 mmHg). A la phase 0 succède la phase I. Néanmoins, il est parfois difficile de faire la distinction entre fin d’expiration et début d’inspiration.  
+
+Les phases II et III sont séparées par un angle alpha, décrit dans la littérature, dont la norme est comprise entre 100° et 110°. Cet angle augmente lorsque la pente de la phase III s’accentue et que la phase II présente une croissance plus progressive. L’angle beta sépare les phases III et 0, il est proche de 90°.  Il permet d’estimer l’importance du phénomène de réinhalation. C’est ainsi que les différentes phases se succèdent sur le capnogramme, au fil des mouvements respiratoires. L’analyse du capnogramme est un élément important dans la surveillance du patient, aussi bien pour les valeurs numériques que pour l’analyse des quatre phases et de la modification de l’aspect des courbes (14)[@howe2011use]. Il existe deux vitesses de balayage des courbes. Une lente, avec une vitesse de 25 mm/min, qui montre les tendances générales de la concentration en CO2 expiré. Une rapide, qui défile à 12.5 mm/sec soit 750 mm/min, et qui permet l’analyse des détails d’un cycle respiratoire.
+
+```{r , echo=FALSE, out.width = "250px", fig.pos='h!',fig.align = 'center', fig.cap = "Courbe de Capnographie Standard et ses différentes phases."}
+knitr::include_graphics("figure/courbe_capno.png")
+```
+
+
+
+### Capnographie Volumétrique
+La capnographie volumétrique correspond à la PCO2 mesurée et exprimée en fonction du volume lors de la phase d’expiration. La terminologie utilisée pour les différentes phases, les transitions de phase, les angles et les pentes sont similaires pour la capnographie standard et la capnographie volumétrique. Le capnogramme volumétrique a été subdivisé en volume pour chaque phase (15)[@rayburn1994neural] et associé à des fonctions (16)[@tusman2011capnography] pour mieux caractériser de manière plus fiable la forme d'onde et produire des estimations dérivées avec une plus grande reproductibilité. L’analyse de la courbe de capnographie volumétrique permet d'estimer un certain nombre de mesures physiologiques et physiquement interprétables de la fonction respiratoire, telles que l'espace mort anatomique et physiologique ainsi que le rapport des deux, l'élimination du CO2 et le flux sanguin capillaire pulmonaire. Ces mesures permettent de découvrir de nombreux troubles cardio-respiratoires comme le syndrome de détresse respiratoire aiguë, la BPCO, l'asthme et l'embolie pulmonaire. Ces paramètres morphologiques, qui divisent le capnogramme volumétrique en phases I-III (17)[@fletcher1981concept], permet une caractérisation et une interprétation accrues du capnogramme volumétrique à l'aide d'un certain nombre de caractéristiques dérivées. L'un des intérêts de cette analyse est de permettre une mesure substitutive non invasive pour l'espace mort anatomique, l'espace mort des voies aériennes, estimé par la méthode de Fowler (18)[@fowler1948lung] qui utilise les parties centrales '' linéaires '' ajustées en phase III (par exemple, 40 à 80% du volume expiré) et la phase II. Cette mesure permet de calculer l'espace mort des voies respiratoires sur une base respiratoire pour chaque patient plutôt que de compter sur la règle plus approximative de 1 mL/kg d’espace mort en fonction du poids. Brewer et al. (19)[@brewer2008anatomic] a constaté que cette règle, dérivée des moyennes de population, par rapport à l'espace mort mesuré de la voie aérienne, ne présentait aucune corrélation (r2 = 0,0002). Au fil du temps, les chercheurs s'inquiètent de l'effet des variations de mesure sur les estimations du volume de l'espace mort de la méthode Fowler et de la variation résultante de ces paramètres calculés. Cela a conduit au développement de méthodes à faible dispersion, qui comprenaient l'ajustement du volume expiratoire de CO2 par rapport à la courbe de volume expiratoire entre 40 et 80% du volume expiré en utilisant des polynômes de première, seconde et troisième ordre (20)[@tang2007systematic]. Plus récemment, un ajustement rapide du capnogramme volumétrique à l'aide d'une approximation fonctionnelle déterminée avec un algorithme non linéaire de moindres carrés a été utilisé (16)[@tusman2011capnography], ce qui a entraîné une diminution de la variabilité respiratoire intra-patient ainsi que la dispersion des paramètres calculés. Les caractéristiques discutées dans cette section sont destinées à être interprétées en utilisant des concepts physiologiques ou cliniques connus.
+
+
+### Pathologies respiratoires et courbes de capnographie
+L’analyse des données fournies par la capnographie doit être réalisée de manière systématique. Une variation de la PETCO2 doit tenir compte des modifications de la forme du capnogramme et des trois éléments qui interviennent sur la PETCO2, à savoir la production métabolique de CO2, son transport en fonction du débit sanguin et son élimination par la ventilation.
+
+#### Intubation oesophagienne
+Affirmer que la sonde d’intubation se trouve dans la trachée est souvent difficile, et l’auscultation pulmonaire ne permet pas toujours de faire la part des choses, notamment chez les sujets obèses. C’est pourquoi la vérification de la position de la sonde par le suivi de la courbe de capnographie est devenue une pratique courante en pré-hospitalier et en anesthésie(21)[@jung2008modalites]. En cas d’intubation oesophagienne, on observera soit l’absence de courbe de capnographie, soit quelques courbes dont l’amplitude va décroître progressivement. Quand celles-ci sont visibles, elles reflètent le gaz entré dans l’estomac lors de la ventilation non invasive au BAVU, ou l’ingestion au préalable de traitements anti-acides, carbonatés ou effervescents créant une réaction chimique avec production de CO2 intra-gastrique. Mais ce CO2 est rapidement évacué par la ventilation, provoquant une chute de l’EtCO2 et un aplatissement des courbes. Il est donc recommandé d’attendre 6 cycles respiratoires avant de confirmer l’intubation endotrachéale.
+
+#### Intubation sélective
+La bronche souche droite forme un angle de 25° avec la trachée, elle est donc pratiquement dans son axe, ce qui explique que dans la majorité des cas d’intubation sélective accidentelle, la sonde se trouve dans la bronche droite. Lors d’une intubation sélective, il existe deux phénomènes. Le premier est lié à une augmentation de l’espace mort, un élargissement du gradient alvéolo-artériel en CO2 et une baisse de la PETCO2. Le second est une diminution de la ventilation alvéolaire, une augmentation de la PaCO2 et donc de la PETCO2 au niveau de la bronche non intubée(21)[@jung2008modalites]. 
+
+#### Embolie pulmonaire (22)(23)[@kline1998preliminary][@wiegand2000effectiveness]
+L’embolie pulmonaire augmente l’espace mort alvéolaire, entraînant une diminution du CO2 expiré par dilution et par conséquent une PETCO2 inférieure à des valeurs normales.
+Le gradient alvéolo-artériel et par conséquent la P(a-ET)CO2 augmente. Plusieurs études ont été menées pour discuter de l’intérêt de la mesure du CO2 expiré dans le diagnostic de l’embolie pulmonaire(13)(22)[@jabre2010place][@kline1998preliminary]. Une des pistes de travail est d’exclure ce diagnostic quand le patient a une probabilité clinique faible et un gradient P(a-ET)CO2 normal malgré des D-dimères positifs. Mais plus récemment, c’est l’aire sous la courbe de capnographie qui est utilisée pour diagnostiquer l’EP. Celle-ci diminue quand le diagnostic est confirmé. L’aire moyenne sous la courbe de patients ayant une EP est d’environ la moitié moindre de celle des patients sains. Ces données suggèrent qu’un patient présentant des symptômes pouvant évoquer une EP avec courbe de capnographie ayant une faible aire sous la courbe doit être considéré comme étant à haut risque.
+ 
+#### Trouble ventilatoire obstructif : Asthme et BPCO
+L’asthme se caractérise par une hyperréactivité bronchique, une inflammation et un remodelage bronchique (24)[@ozier2011pivotal]. On observe essentiellement une diminution du calibre des voies aériennes appelée obstruction bronchique. Le bronchospasme modifie l’allure du capnogramme avec une augmentation de la pente en phase III. Le bronchospasme entraîne une diminution de la ventilation alvéolaire sans diminution de la perfusion pulmonaire ce qui diminue le rapport ventilation-perfusion (V/Q). Or, la réduction de diamètre des bronches n’est pas homogène dans l’ensemble poumon, certaines zones étant plus spastiques que d’autres, de ce fait on assiste également à une diminution du rapport V/Q alvéolaire local. On parle d’hétérogénéité en parallèle du rapport V/Q alvéolaire(25)[@hisamuddin2009correlations]. Cela cause une déformation du capnogramme marquée par une (14)[@howe2011use] _figure 2_:  
+
+- Diminution de la verticalité en phase II
+- Ouverture de l’angle alpha
+- Augmentation de la pente en phase III  
+
+Dans les cas sévères, cette courbe prend une forme triangulaire. La pente en phase III et l’angle alpha sont associés au degré de sévérité de la crise d’asthme, plus ceux-ci sont importants, plus le bronchospasme est majeur (26)[@langhan2008quantitative]. Des études ont montré que l’ETCO2 des patients faisant une crise d’asthme est plus bas que les sujets sains (35)(26)[@den2006bayesian][@langhan2008quantitative]. Dans ce contexte la PETCO2 n’est plus le reflet de la pression alvéolaire en CO2 du fait d’un trapping alvéolaire important. On observe une augmentation du temps expiratoire, ce qui entraîne une augmentation du gradient P(a-ET)CO2. Une étude américaine a montré que le rapport dCO2/dt, qui reflète la pente du plateau alvéolaire du capnogramme, permet de détecter l’obstruction bronchique(27)[@yaron1996utility]. L’auscultation pulmonaire avec la recherche de sibilants ne permet pas toujours de prédire la présence ou non d’une obstruction bronchique, et la sévérité des sibilants n’est pas forcément corrélée au diamètre des voies aériennes, d’où l’intérêt d’une mesure objective (28)[@egleston1997capnography]. Krauss et al.(29)[@krauss_capnogram_2005] ont montré dans les troubles obstructifs de type asthme et BPCO, une déformation de la courbe de capnographie caractéristique en forme d’« aileron de requin » ou « shark’s fin » en anglais. Ces modifications chez les malades de pathologie pulmonaire obstructive (BPCO et asthme) sont marquées par une courbure importante [5][@you1994expiratory], [10][@smalhout1975atlas], [11][@kelsey1962expiratory] et résulte de l'arrivée décalée du gaz alvéolaire [3][@dubois1952alveolar]. Ces modifications de courbe chez les patients obstructifs étaient corrélées aux altérations retrouvées lors des mesures de spirométrie.
+Comparativement, il y a peu de données sur la morphologie du capnogramme chez les patients présentant une insuffisance cardiaque aiguë ou d'autres maladies pulmonaires restrictives.
+
+
+```{r , echo=FALSE, out.width = "250px", fig.pos='h!', fig.align = 'center', fig.cap = "Courbe de Capnographie Standard normale (en noir) et pahtologique (en rose)."}
+knitr::include_graphics("figure/courbe_capno_patho.png")
+``` 
+
+
+\pagebreak
+
+
+## Analyse d'article - Bibliographie sur la Capnographie
+
+### Utility of the expiratory capnogram in the assessment of bronchospasm [@]
+En 1996, Yaron et al. (27) ont conduit une étude prospective au service des urgences en vue d'étudier l'intérêt de l'utilisation de la courbe de capnographie pour l'évaluation du bronchospasme chez des patients asthmatique. Cette étude incluait 20 patients asthmatiques et 28 patients sains. L'objectif de ce travail était de voir si la pente du plateau alvéolaire (pente de phase III ou dCO2 / dt) du capnogramme pouvait servir comme mesure non invasive du bronchospasme et était indépendant de l'effort contrairement aux mesures de spirométries. Les valeurs de Débit Expiratoire de Pointe (DEP), approche standard pour évaluer l'obstruction des voies respiratoires aux urgences, et dCO2 / dt ont été mesurées pour chaque sujet ainsi qu'avant et après traitement bronchodilatateur. La mesure de la pente du plateau alvéolaire dCO2 / dt était réalisée sur un cycle de cinq expirations régulières consécutives avec un moyennage des valeurs pour chaque patient. Ils ont conclu que la dCO2 / dt était une mesure indépendante de l'effort, rapide et non invasive permettant une évaluation du bronchospasme chez les patients souffrant d'asthme sévère. Ce paramètre était fortement corrélé au DEP (r = 0,84, p < 0,001). Les résultats montraient également une modification du DEP et de la dCO2 / dt après traitement par bronchodilatateur. Le DEP passait de 58 à 74% (p < 0.001) et de 0.27% à 0.19% (p < 0.005) pour la dCO2/dt. Druck et al. (31), travaillant avec Yaron, ont cherché à prolonger ce travail en examinant la relation entre les modifications de DEP et le changement de pente de la phase III en capnographie volumétrique pour des mesures enregistrées avant et après bronchodilatateur. Le pourcentage de changements entre le DEP et son substitut était associé à une forte corrélation (r = 0.7, p < 0.2, n = 13). Comme pour le travail de You et al., cette recherche définit un nouveau paramètre pour analyser le capnogramme pour des patients asthmatiques. Cependant, la mesure de cet indice a été réalisée manuellement avec un risque d'erreur important et une difficulté pour son application en clinque courante.
+
+
+
+### Expiratory capnography in asthma- evaluation of various shape indices   [@you1994expiratory]
+Une des premières études fondamentales dans l'analyse de la capnographie a été conduite par You et al (30). Ils ont examiné de nouveaux paramètres en fonction des pentes et des ratios de surface pour mieux caractériser la nature de la transition de la phase II à la phase III en capnographie standard. Les corrélations entre indices capnographiques et mesures spirométriques ont été calculées chez 10 sujets sains et 30 patients asthmatiques de sévérités différentes. Huit indices descriptifs ont été évaluée en mesurant leur reproductibilité et leur sensibilité sur l'évaluation de l'obstruction des voies aériennes. Trois indices mesurais la pente de la courbe lors de la phase d'expiration (S1, S2 et S3). Un index composite SR correspondant au ratio entre les pente de la partie 1 et 2 de l'ascention du CO2 (S2/S1) *100 a été évalué. Un ratio de surface AR correspondant au rapport des surface A1 et A2, surface au-dessus d'un seuil de 2.5 % de CO2 entre 0.2 et 1 seconde (AR : (A1/A2) *100), a été calculé. Trois derniers indices ont été utilisé correspondant à la deuxième dérivée de la courbe de capnographie au niveau des segment S1, S2 et S3 (SD1, SD2 et SD3).
+Les résultats ont montré qu'une grande différence de corrélation parmi l'ensembles des indices. Selon leur recherche, une haute sensibilité à l'obstruction de voie aérienne a été vue pour des pentes intermédiaires et terminales (S2 et S3) ainsi que pour le radio des pentes (SR), suivie par les indices associés à la dérivées secondes de la courbes (SD1, SD2, SD3). 
+La corrélation la plus forte a été retrouvée entre le VEMS%-pred et le pic de dérivée seconde SD2 associé à une corrélation r = 0.93 (p < 0.01). Les corrélations les plus faibles ont été retrouvé pour les indices S1 et AR. Cette recherche a permis de mettre en évidence des paramètres simples et utilisables, ainsi qu'une corrélation forte entre indice de capnogrpahie et données spirométriques. Mais ces paramètres restent du domaine temporel sans anlayse dans le domaine fréquentiel. Il est à noter également que les mesures ont été réalisées manuellement associé à un facteur d'erreur non négligeable, aussi consommateur de temps avec une reproductibilité médiocre. Ce travail reste néanmoins malgré quelques points discutables, une référence dans l'analyse de la capnographie.
+
+
+
+### Capnography for monitoring non-intubated spontaneously breathing patients in an emergency room setting [@egleston1997capnography]
+
+
+### Segmented Wavelet Decomposition for Capnogram Feature Extraction in Asthma Classification [@betancourt2014segmented]
+Pomares et al. (40) décrivent une méthode pour évaluer la gravité de l'asthme en utilisant l'extraction de caractéristiques à partir de la décomposition des ondelettes du tracé de capnographie (41). Ces caractéristiques ont été déterminées par la décomposition en segments de la forme d'onde (le versant ascendant, le plateau et le versant descendant). Une fenêtre de 3 pixels est utilisée pour approximer la courbe par une droite par interpolation linéaire. Les pentes des 4 segmenter de la courbe en A-B, C-D, E-F, G-H ont été analysés. Une fois cette première étape réalisée, 4 signaux ont été extraits permettant une analyse par transformé en ondelette à l'aide successivement de filtre passe haut et passe bas associé à une échantillonnage descendant. Dans le même temps une analyse utilisant une ondelette mère de Haar " de frome carré " a été réalisé permettant la détermination des coefficients d'ondelettes. Cette dernière était associé à une analyse multi-résolution par segments en fonction de la transformation en ondelettes. En utilisant un classificateur de machine vectorielle de support (SVM) avec un noyau de fonction Gaussian Radial Basis, les coefficients d'entrée pour chaque capnogramme ont été classés dans l'une des six classes de gravité. Le vecteur caractéristique le plus performant comprenait l'association des segments ascendant et descendant du capnogramme avec une sensibilité et une spécificité respectivement de 100% et 91,43%, en utilisant l'ensemble de données complet pour les tests, polarisant ainsi les résultats rapportés. Les meilleurs sensibilité spécificité retrouvé lors de l'analyse d'un seul segment était de 55,7% et 99,4%, et correspondait au segment G-H du plateau de la courbe. L'analyse, à l'aide de l'ondelette mère de Haar, retrouvait une sensibilité et spécificité de respectivement 88,6% et 100% très proche de l'analyse associant deux segments de la courbe. L'utilisation de la transformation en ondelettes permet de sélectionner les caractéristiques permettant d'optimiser l'analyse de la courbe et la classification des niveaux de sévérité. Cette étude a été mené à Cuba sur 23 patients présentant un asthme de modéré à sévère.
+
+
+### Investigation of capnogram signal characteristics using statistical methods [@kazemi2012investigation]
+
+
+### New Prognostic Index to Detect the Severity of Asthma Automatically Using Signal Processing Techniques of Capnogram [@kazemi2016new]
+Kazemi et al. (38) (39) ont recueilli des enregistrements de capnographie sur canule nasale pour 73 patients asthmatique et 23 non asthmatique provenant du service des urgences. Les enregistrements comprenaient une durée de 5 minutes chacune avec une fréquence d'échantillonnage de 200Hz. Dans un second temps une sélection de 5 cycles respiratoires consécutifs sans artéfact correspondant à environ 20 secondes a été réalisé pour chaque patient. Une variabilité inter-respiration significative était statistiquement retrouvé sur la moyenne et la variance conduisant l'auteur à caractériser le signal de capnographie comme non stationnaire. À partir du capnogramme, les caractéristiques ont été extraites en utilisant différentes façons de représenter des signaux non-stationnaire : dans le domaine temporel, avec un codage prévisionnel linéaire (LPC) et dans le domaine fréquentiel, avec un modèle autorégressif associé à une transformé rapide de Fourier pour représenter la densité spectrale de puissance (PSD). La capnographie étant un signal biomédical lié à la respiration et donc de la catégorie des signaux basse fréquence, les auteurs ont choisis une fenêtre de Blackman de longueur M = 256 associé à la transformé rapide de Fourier (FFT). Ce choix n'a pas affecté la résolution temporelle du signal. À partir des caractéristiques extraites, cinq caractéristiques (toutes avec des AUC individuels > 0,7) ont été sélectionnées pour la classification, y compris 2 coefficients LPC, et, à partir du PSD, la première composante de fréquence ainsi que l'amplitude et nombre total de composants de la bande de fréquence ont été sélectionnés. En utilisant les cinq caractéristiques des capnogrammes de patient asthmatiques et non asthmatiques, la classification par une ANN avec comme sortie unique la gravité de l'asthme, a montré que la détection rapportée et le taux d'erreur étaient respectivement de 90,15 et 9,85%. Dans cette études les auteurs ont rapporté une différence significative du nombre de composante spectrale et de leur amplitude de la FFT entre les patients asthmatiques et non asthmatiques. Le profil spectral des patients asthmatiques présentait deux pics principaux contre un seul pour les patients non asthmatiques. La fréquence de ces pics principaux ainsi que leur bande passante étaient différente entre ces deux populations. Le premier des pics principaux avait une fréquence associée à une bande passante pour les patients asthmatiques resperctivement de 0.078 Hz et 0.23 Hz contre 0.04 Hz et 0.08 Hz respectivement pour les non asthmatiques. L'ensemble des paramètres (magnitude, fréquence et bande passante) du premier des pics principaux présentaient des performances diagnostic importante avec une Aire sous la courbe de la courbe ROC (AUC) supérieur à 0.8. De la même façon l'analyse en PSD met en évidence des différences similaires avec deux pics de composante spectrale pour les patients asthmatique contre un pic pour les patients non asthmatique. La performance diagnostic la plus intéressante était représenté par la fréquence du premier pic en PSD avec respectivement une sensibilité, spécificité et un AUC de respectivement 98%, 95% et 0.996 (p < 0.0001). L'étude des composantes spectrales par transformé de Fourier du signal de capnographie n'a quasiment pas été étudié. Cette étude de Kazemi et al. montre des résultats prometteurs avec des performances diagnostics intéressantes pour dépister les patients asthmatiques et fait référence en la matière. 
+
+
+### Automated Quantitative Analysis of Capnogram Shape for COPD–Normal and COPD–CHF Classification [@mieloszyk2014automated,]
+Cette article a été écrit par le _Mieloszyk R. et al._ du _Massachusetts Institute of Technology Cambridge USA_ et pupblié en 2014. L'objectif principal de ce travail était de distinguer en les classifiant de façon automatique à l'aide de la courbe de capnographie, les patients indemnes de pathologies pulmonaires, les patients présentant une exacerbation de BPCO et les patients en insuffisance cardiaque aiguë. L'objectif principal était de distinguer les patients en exacerbation de BPCO par rapport au patient en insuffisance cardiaque aiguë.
+
+La section III traite du prétraitement du capnogramme et de la conception du classificateur (algorithme d'apprentissage) à l'aide de l'ensemble d'apprentissage.
+
+
+Les données ont été recueillies prospectivement sur des échantillon de patients provenant de trois centres d'inclusion et sur une période de sept ans. Les patients sains indemne de toutes pathologie pulmonaire ont été inclus sur deux sites. Le recrutement des patients présentant une insuffisance cardiaque aiguë ou une décompensation de BPCO ont été réalisées sur le troisièmes site dans le service des urgences chez des patients présentant une détresse respiratoire aiguë.
+
+Les enregistrements des patients des urgences étaient réalisés en position assise à l'aide d'une canule nasale à un capnographe portable _(Capnostream 20, Oridion Medical, Needham, MA, USA)_. 
+Le capnographe recueille un échantillon continu à un débit de 50 mL / min et enregistre le PeCO2 instantané toutes les 50 ms. Pour ces patients les enregistrements étaient effectués sur une durée 10 à 30 min.
+Concernant les sujets normaux, après avoir obtenu leur consentement éclairé , l'enregistrement s'est fait dans les même conditions en position assis avec une canule nasale avec le même type de matériel (Capnostream 20). Les durées d'enregistrement étaient de 3 min ou 15 min en fonction des sites pour les sujets normaux.
+L'analyse a été réalisé après partitionnement des données en deux groupes. Un premier groupe de données permettant de développer et d'entrainer l'algorithme de classification. Le second groupe correspond à groupe test permettant d'évaluer et de valider le modèle à l'aide de test (d'analyse) de perfomance en comparant les résultats de classification à l'aide de l'algorithme de classification avec les résultats établis par les cliniciens. Au total 143 patients ont été inclus. Quatre patients ont été exclus car ils présentaient un tableau mixte de décompensation cardiaque et d'exacerbation de BPCO. Le groupe d'entrainement presentait 84 patients distribué en : 20 patients normaux, 31 patients en ICA et 33 patients en exacerbation de BPCO. Le groupe test quand à lui comprenait 55 patients : 10 patients normaux, 22 patients en ICA et 23 patients en exacerbation de BPCO.
+Le prétraitement des capnogrammes comprennait : l'isolement des capnogrammes un par un en identifiant et marquant le début et la fin de chaque expiration; un capnogramme type était produit en moyennant les profils expiratoire pour chaque patient et en éliminant les profils abérants correspondant une déviation exagérer par rapport au profil moyen; et pour finir l'extraction des caractéristiques physiologiques sélectionnées de chaque expiration.
+Le début et la fin de chaque segment d'expiration pour chaque enregistrement ont été identifiés à l'aide d'un algorithme reconnaissant le début des pentes positive et négative. Un profil de capnogramme moyen a ensuite été construit en superposant les expirations en les centrants sur une valeur prédéterminée de 15 mmHg de PeCO2 (condidérée comme une valeur précoce et reproductible pour chaque expiration), et en moyennant toutes les valeurs à chaque pas de temps (ou chaque instant). L'amplitude de variation par rapport au modèle a été déterminée en calculant, à chaque instant, l'écart-type des expirations superposées. Un exemple d'analyse et montré dans la _figure 3_.
+
+```{r , echo=FALSE, out.width = "250px", fig.pos='h!',fig.align = 'center', fig.cap = "Profil expiratoire d'un capnogramme de patient BPCO. Les exhalaisons de capnogrammes (en bleu) sont alignées à 15 mmHg de PeCO2 puis moyennées verticalement pour construire le profil moyen du capnogramme (en rouge)."}
+knitr::include_graphics("figure/mieloszyk2014_fig1.png")
+```
+
+Les expirations atypiques ont été reconnues et exclues en utilisant le profil moyen comme référence de capnogrammele modèle de capnogramme comme exemple de respiration. Chaque expiration a été notée sur la base d'une mesure globale des déviations par rapport au profil moyen standard, en se référant à l'écart-type approprié (associé). Les expirations, dont l'écart global dépassaient un certain seuil, étaient exclues de l'analyse et de la classiffication. Après le prétraitement automatisé de chaque enregistrement pour éliminer les exhalaisons des valeurs aberrantes, les 80 premières expirations valides de chaque enregistrement ont été utilisées pour l'analyse.
+
+
+
+
+
+
+
+Les quatre caractéristiques physiologiques utilisées pour la conception de l'électeur ont été sélectionnées à l'aide de l'analyse de validation croisée décrite plus loin et comprenaient les éléments suivants _figure 4_: 
+
+  - durée de l'expiration; 
+  - PeCO2 maximum ou PeCO2 de fin d'expiration (ETCO2); 
+  - temps passé à ETCO2; 
+  - pente de fin d'expiration. 
+  
+La durée d'expiration est la durée entre le début de l'expiration et la fin de celle-ci. PeCO2 maximum est la valeur PeCO2 à la fin de l’expiration. Le temps passé à ETCO2 est la durée pendant laquelle PeCO2 reste à sa valeur maximale. La pente d'expiration finale a été calculée comme la pente d'une droite correspondant aux cinq dernières valeurs de PeCO2 de l'exhalation.
+
+```{r , echo=FALSE, out.width = "450px", fig.pos='h!',fig.align = 'center', fig.cap = "Quatre caractéristiques extraites du capnogramme et utilisées pour la classification. Celles-ci comprennent : la durée de l'expiration, le CO2 en fin d'expiration (ETCO2), la pente de l'expiration finale et le temps passé à l'ETCO2."}
+knitr::include_graphics("figure/mieloszyk2014_fig2.png")
+```
+
+
+L'entraînement et le vote de chaque électeur se déroulent dans l'espace à quatre dimensions défini par les caractéristiques. Deux approches pour la constitution et le vote de chaque électeur ont été suivi. Dans une première approche, respiration par respiration, les caractéristiques de chaque expiration dans l'ensemble des respirations constituent un point de l'espace $\mathbb R^{4}$ des caractéristiques, de sorte qu'il y a autant de points que d'expiration. Dans la seconde approche par moyenne des caractéristiques, les valeurs de ces caractéristiques respectives sont moyennées sur l'ensemble des expirations pour un enregistrement donné permet de définir un point unique dans l'espace $\mathbb R^{4}$ des caractéristiques.
+
+
+
+
+Dans cette article les auteurs fond par des besoins informatiques, du coût qu'on nécessité les calculs de ces analyses.
+Les calculs pour le prétraitement, l'extraction de caractéristiques, la validation croisée et la construction ROC sur l'ensemble de l'ensemble ont duré moins de 2,7 minutes sur un ordinateur portable MacBook Pro 2012 (Apple, Cupertino, Californie) avec 4 Go de RAM et un processeur Intel Core i7 de 2,2 GHz. processeur exécutant MATLAB 2013a (MathWorks, Natick, Massachusetts).
+
+
+
+Un seuil de 60%, correspondant à une sensibilité et à une spécificité d'environ 0,78, a été choisi pour la classification entre ICA et BPCO. Ce seuil correspond au seuil minimal de votant en faveur d'une ICA pour le calsser comme tel par rapport à une exacerbationd de BPCO. De la même manière un seuil de 50% de votant en faveur d'une exacerbation de BPCO pour le classifier comme tel par rapport à des patients normaux indemnes de pathologie pulmonaire. Ce seuil correspond à une sensibilité et une spécificité d'environ 0.88.
+
+L'exécution des classificateurs en utilisant l'approche respiration par respiration avec 80 expirations retrouve des performance diagnostique pour la classificaiton des patients ICA et BPCO avec une AUC de 0,89 (IC à 95%: 0,72-0,96). La courbe ROC pour la classification entre patient BPCO et normaux retrouvait une AUC de 0,98 (IC à 95%: 0,82-1,0).
+L'approche respiration par respiration présentait de meilleurs performance diagnostique avec une AUC supérieure sur l'ensembles de test diagnostique aussi bien pour les ICA/BPCO que pour les BPCO/Normaux, par rapport à l'approche moyennant les caractéristiques.
+
+
+
+
+
+
+### Model-Based Estimation of Pulmonary Compliance and Resistance Parameters from Time-Based Capnography [@abid2015model]
+Cette article a été écrit par le _Abid A. et al._ du _Massachusetts Institute of Technology Cambridge USA_ et pupblié en 2015. Elle porte sur l'analyse de la courbe de capnographie par un modèle mathématique de type mécanistique. Pour réaliser cette analyse 15 patients asthmatiques ont été inclus avec un âge médian de 48 ans en majorité des femmes (73%). L'enregistrement des courbes de capnographie associé à la mesure du VEMS (Volume Expiratoire Maximal Seconde) a été fait avant, pendant et après un test à la Metacholine. La réponse à la Métacholine était considérée comme positive pour une diminution de plus de 20% du VEMS. Des Bêta2-mimétiques étaient administrées comme bronchodilateur après le test à la Metacholine pour permettre un retrour à la normale. Les mesures de capnographie de longueur variable (entre 2 et 5 minutes) ont été enregistrés en utilisant un capnographe portable _(Capnostream 20, Covidien, Mansfield, Massachusetts)_ à l'aide d'une canule nasale avec une fréquence de mesure à 20 Hz. L'analyse de capnographie a été réalisée par post-traitement, capnogramme par capnogramme, en éliminant les segments de la phase inspiratoire et en gardant uniquement les segments de la phase d'expiration. L'analyse a consisté en un ajustement de la courbe, des segments expiratoires mesurés, à un modèle mathématique de type mécanistique _(fitting)_. Ce modèle est basé sur l'hypothèse de deux sous-systèmes interconnectés. Le premier est le sous-système de flux d'air, qui régit le débit d'air total, mobilisé par les différences de pression dans différents compartiments pulmonaires. Le second est le sous-système de mélange des gaz, qui s'appuie sur le sous-système de flux d'air, et régit l'évolution du taux de CO2 lors du mélange des zones riches en CO2 des poumons avec l'air pauvre en CO2 correspondant à l'espace mort. 
+Concernant le sous-système de flux d'air : 
+Un modèle simple est utilisé, celui d'un compartiment alvéolaire unique, qui modélise la région des poumons qui s'étend (en grande partie l'espace alvéolaire) comme une paire de compartiments coulissants, comme le montre la figure 1. Ces compartiments sont reliés les uns aux autres avec un ressort de constante de $C_{l}$, représentant la compliance du tissu alvéolaire, et reliés à l'atmosphère par un tuyau de résistance $R_{l}$, représentant les résistances des voies aériennes supérieures.
+Concernant le sous système de mélange :
+Lors de l'inspiration, l'espace mort, qui est la région du poumons ne participant pas aux échanges gazeux, est rincée avec de l'air atmosphérique contenant une fraction de CO2 négligeable. L'air dans la région alvéolaire, cependant, a des quantités substantielles de CO2 (à pression partielle $p_{A}$) en raison des échanges gazeux avec les capillaires pulmonaires. Lors de l'expiration, l'air riche en CO2 des alvéoles se mélange à l'air pauvre en CO2 de l'espace mort. Nous modélisons ce processus comme un mélange instantané d'air: une quantité infinitésimale d'air pénètre dans l'espace mort et se mélange instantanément pour créer un mélange homogène d'air dans l'espace mort, de concentration $p(t)$ au temps $t$. Une quantité infinitésimale de ceci est expulsée par la bouche et le nez pour maintenir le volume de l'espace mort, $V_{D}$, fixé. Ce modèle est basé sur le principe qu'un mélange important se produit dans l'espace mort par la turbulence et la ramification des voies aériennes dans les voies respiratoires supérieures. En se basant sur ces hypothèses et en considérant $p_{D}(t)$ au temps zéro, égale à zéro soit $p_{D}(0)=0$, les auteurs retouve une équation du modèle mécanistique du type :
+$$
+p_{D}(t)=p_{A} - p_{A} \mathrm{e}^{\alpha} \mathrm{e}^{\alpha\mathrm{e}^{-\frac{t}{\tau}}} 
+\tag{1}
+$$
+avec $\alpha= \frac{-C_{l}\Delta P}{V_{D}}$ et $\tau=R_{l}C_{l}$.
+
+  - $C_{l}$ : la compliance pulmonaire
+  - $R_{l}$ : la résistance des voies aériennes
+  - $\Delta P$ : gradient de pression moteur en expiration
+  - $p_{A}$ : pression partielle de CO2 alvéolaire
+  - $V_{D}$ : volume de l'espace mort anatomique
+  
+  
+Tableau 1: Paramètres
+  
+  | paramétres | description                               |
+  |:----------:|:------------------------------------------|
+  |$C_{l}$     | la compliance pulmonaire                  |
+  |$R_{l}$     | la résistance des voies aériennes         |
+  |$\Delta P$  | gradient de pression moteur en expiration |
+  |$p_{A}$     | pression partielle de CO2 alvéolaire      |
+  |$V_{D}$     | volume de l'espace mort anatomique        |
+  
+
+Les expirations inférieures à 1,25 seconde ont été exclus. Les 2 200 expirations résultantes étaient chacune ajustées à la forme de l'équation en choisissant des valeurs pour $\alpha$ et $\tau$ (alternativement, $R_{l}$ et $C_{l}$ pour une fraction fixe $\frac{\Delta P}{V_{D}}$) qui minimisant l'erreur quadratique moyenne entre le CO2 calculé et le profil du CO2 mesuré. La valeur de $p_{A}$ a été fixée par les auteurs à 40 mmHg en considérant l'hypothèse que cette valeur ne variait pas pendant la provocation à la méthacholine.
+Un premier résultat globale non apparié montre des valeurs 
+Pour une majorités de patient, après le test à la méthacholine, une tendance semble se dégager avec une augmentation du paramètre $\tau$ ou une diminution du pramètre $\alpha$, voir les deux. Ces résultats s'expliquent par le fait que la métacholine agissant comme un bronchoconstricteur augmente les résistances pulmonaires $R_{l}$ et ainsi la valeur $\tau$. Des études suggèrent également que l'obstruction des voies aériennes augmente l'espace mort physiologique et ainsi une diminution du paramètre $\alpha$. Bien qu'une correspondance entre les paramètres estimés par capnographie et le VEMS ne soit pas retrouvé chez tous les sujets, la plupart des sujets affichent une tendance avec une augmentation de $\tau$ et une diminution de $\alpha$ lors de l'administration de la méthacholine.
+Ce modèle mécanique simple mono-alvéolaire de poumon semble suffisament complexe pour extraire des paramètres permettant de décrir et de discriminer différents état du poumons. Ce modèle reste assez simple pour estimer les paramètres de résistance et de compliance pulmonaire, ainsi que les relations existant entre ces deux propriétés physiologiques.
+Dans ce travail aucune données n'est communiqués sur les résidus et l'erreur standard entre les données mesurées et les estmiations du modèle. Les auteurs nottent également le fait de ne pas avoir pris en compte les variablités de concentration du CO2 alvéolaire, l'hétérogénéité de concentration entre les alvéoles et le bruit dû au capteur.
+
+
+
+
+### Model-Based Estimation of Respiratory Parameters from Capnography, with Application to Diagnosing Obstructive Lung Disease [@abid2017model]
+
+
+
+
+
+$$ 
+p_{D}(t)=p_{A} (1-\mathrm{e}^{-\alpha} \mathrm{e}^{\alpha\mathrm{e}^{-\frac{t}{\tau}}})  
+\tag{2}
+$$ 
+
+
+
+Le paramètre $\tau=R_{l}C_{l}$ représente la constante de temps pulmonaire. Le parmètre $\alpha$ définit par $\alpha= \frac{C_{l}\Delta P}{V_{d}} =\frac{V_{T}}{V_{D}}$ où la quantité $C_{l}\Delta P=V_{T}$ représente le volume courant (en supposant une compliance pulmonaire linéaire), donc $\alpha$ est approximativement l'inverse de la fraction de l'espace mort pulmonaire
+
+
+
+### Bayesian Tracking of a Nonlinear Model of the Capnogram [@den2006bayesian]
+En 2006, Buijs et al. ont présenté une méthode Bayésienne pour l'identification de capnogramme volumétrique respiration après respiration (35). La méthode intègre un modèle d'échange de CO2 dans les poumons, en raison de la nature non-linéaire de la respiration humain. Ce modèle représente le flux respiratoire et intègre un compartiment de réinhalation, un compartiment espace mort des voies aériennes et un compartiment représentant les alvéoles. En utilisant ce modèle une prédiction pour la tension de CO2 alvéolaire non mesurée pourrait être faite. Basé sur des modèles de simulations, il est montré que l'algorithme adaptatif est capable de suivre rapidement les fluctuations de mesures du CO2. La structure du modèle présentée cette recherche est basée sur la connaissance physiologique a priori, où les paramètres du modèle ont des significations physiques claires. Ceci a l'avantage que le modèle peut être utilisé pour aider dans l'interprétation du capnogramme. Cependant, si la méthode actuelle veut aider le clinicien dans l'interprétation des données de capnographie, il est nécessaire de fournir en directe des paramètres physiologiquement pertinents qui seront déterminant pour l'analyse. Montre la simulation d'un capnogramme, utilisant des paramètres modèles par défaut.
+Cependant, des modèles physiques précis contiennent souvent des non-linéarités, comme des variabilités dans le temps du flux d'air et de volume alvéolaire, aussi bien que l'alternance entre l'inspiration et l'expiration dans le modèle respiration de flux. À cause de ces non-linéarités, l'identification des paramètres du modèle exige un certain type d'algorithme d'optimisation(36). Ces algorithmes sont souvent hors connexion (en mode autonome) et exigent la supposition que les paramètres du modèle soient constants au cours de la période d'analyse. De plus, la division en compartiments simples de l'espace mort des voies aériennes et du volume alvéolaire semble être une schématisation grossier, compte tenu que les voies aériennes humaines sont constitués de nombreuses bronches et de millions d'alvéoles, avec probablement des propriétés différentes en termes d'échange gazeux. En outre, le taux métabolique de CO2 est un paramètre condensé ou composite, qui reflète les modifications du flux sanguin par exemple pulmonaire, la production de CO2 des tissus et l'hétérogénéité des rapports ventilation perfusion alvéolaires. Le modèle ne permet pas de distinguer l'importance de l'influence de ces différents phénomènes physiologiques. Il est donc nécessaire, pour envisager une utilisation clinique future, de réaliser de plus amples études sur des données tant simulées qu'expérimentales qui permettront mieux définir avantage et les limites de ce méthode.
+
+
+
+
+
+
+
+## Discussion 
+
+### Prétraitement
+
+- problèmatique d'analyse de la courbe. Deux modes principaux : 
+
+* Un mode d'analyse (éparce) en découpant la courbe capnogramme par capnogramme. 
+      - Avec secondairement une analyse de chaque capnogramme pour un enregistrement pour avoir des mesures des caractéristiques de la courbe capnogrammme par capnogramme permettant d'en estimé une moyenne, une médiane et une déviation standard (ou un écart type). Problème de selection des capnogrammes correctes et abérrants. Mesure de la variablité : méthode et intérêt.
+      - OU analyse après production d'un profil moyen en moyennant les courbes après supperposition centrées sur une valeur, un maqueur, un criètre des différents capnogramme facielement identifiable : une valeur fixé (15 mmHg comme chez Mieloszik [@mieloszyk2014automated,]) ou la valeur maximale de la pente identifiable par le pic positif (valeur max) de la dérivée première.
+
+* Un mode d'analyse globale en prenant un compte un essemble définit de la courbe avec plusieurs capnogramme analysé. Utilisé dans l'analyse par transformée de Fourier mais pourrait s'appliquer à l'analyse par trasnformée en ondelettes.
+
+### features ou caractèristiques analysées
+
+
+### Méthode de d'analyse de la courbe
+- mesure simple de paramètres (temps, EtCO2, pente)
+- Ajustement par rappor à une équation
+- trasnfromée de Fourier
+- transformée en ondelette
+
+### Méthode de Classification
+
+
+
+
+
+
+### Proposition d'approche
+
+- voir si l'âge à une influence sur la courbe de capnographie chez des patients normaux.
+
+- l'incidence de la variablité de la courbe de capnographie, des capnogrammes au cours du temps. Effet perturbateur mais également intêret pour l'analyse et la classification. Variation plus importante ou moins importante des capnogrammes en fonction des pathologies ?
+
+- Analyse et comparaison de différent modèle mécanistique, différente équation de courbe.
+
+- Rercher de capnogramme typique en fonction des pathologies, l'associé à des ondelettes mères dans une transformée en ondelettes.
+
+
+- Approche "multi-échelle" ou "multi-filtre" : en utilisant des analyses différentes de la courbes pour en extraire des paramètres ou caractères différents pour identifier les différentes pathologies comme l'Insuffisance Cardiaque, les syndromes obstructifs dans leur divers aspect, les pathologies restrictives, les fibroses et les HTAP. Un peu comme du Deep Learning avec l'application de masque comme des réseaux convolutifs pour exprimer de façon les différentes pathologies. Par exemple, par une transformer de fourier, une transformer en ondelettes (en y associant l'inspiration), une approche mécanistique avec un ajustement de la courbe à un modèle, mesure de paramètres simple comme l'aire sous la courbe, etc... 
+
+
+
+
+
+\pagebreak
+
+
+
+
+
+------------------------------------------------------------------------------------------
+
+# Conclusion
+
+
+
+\pagebreak
+
+
+------------------------------------------------------------------------------------------
+
+#	References
+
+
+
+
+
