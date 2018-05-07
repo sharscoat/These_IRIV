@@ -1,0 +1,101 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%      Grille de lecture Bibliographique « Capnographie »        %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+OU ?
+————————————
+- dans quel service ?
+- quel recrutement (service des urgences ou EFR) ?
+- plusieurs site ou mono-centrique ?
+
+
+
+QUAND ?
+————————————
+- durée de l’étude ?
+
+
+
+COMENT ?
+————————————
+
+
+
+QUI ?
+————————————
+- Ingénieur ou Médecin ?
+
+
+
+
+
+MATERIEL ?
+————————————
+- type de capnographe utilisé pour le recueil des courbes ?
+- interface buccale ou cannule buco-nasale ?
+- fréquence d’échantillonnage  
+
+
+
+
+METHODOLOGIE de l’ETUDE ?
+———————————————————————————
+- type d’étude ?
+- quel type de patient, recrutemment ?
+- classification de patient ?
+
+
+METHODOLOGIE RECEUIL DES CAPNOGRAPHE ?
+———————————————————————————————————————
+- temps de recueil, d’enregistrement des capnographes
+- 
+
+
+
+MEHTODOLOGIE d’ANALYSE DE LA COURBE DE CAPNOGRAPHIE ?
+——————————————————————————————————————————————————————
+- analyse manuel ou informatisée ?
+- analyse globale de la courbe ou séquentielle (cf question après) ?
+- analyse respiration par respiration (capnogramme par capnogramme) ?
+- méthodologie pour la découpe/le repérage des respirations ou capnogrammes ?
+- quels paramètres ont été  analysés : calculés ou mesurés ?
+- méthodologie pour le recueil de ces paramètres (mesure, calcul) ?
+- pour chaque paramètres valeur final : moyenne, médiane ?
+- prise en compte de la variabilité de ces paramètres dans l’analyse, pour caractériser les patients, prise en compte comme critères de qualités des enregistrement ?
+
+
+
+
+METHODOLOGIE d’ANNALYSE STATISTIQUE ?
+——————————————————————————————————————
+- test diagnostique (courbe ROC et AUC)
+- comparaison multiple (de moyenne, de différence)
+- étude de lien de sévérité (corrélation entre un paramètre et une valeur de sévérité)
+- régression logistique
+- machine learning
+- deep learning
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
