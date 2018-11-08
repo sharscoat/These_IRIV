@@ -102,7 +102,7 @@ Selon l'INSERM en 2000, on estimait à 1,7 million le nombre de personnes attein
 
 ## Physiologie pulmonaire
 
-Physiologie pulmonaire :
+### Physiologie pulmonaire :
 Les deux poumons font partie de l’organe de la respiration mais jouent également un rôle important d’épuration et de protection vis-à-vis de l’environnement avec lequel ils sont en contact aérien permanent. 
 Objectif du poumon est d'oxygèné le sang et d'évacuer le CO2. 
 La fonction principale des poumons est de permettre à de l'O2 contenu dans l'air ambiant de pénétrer dans le sang veineux mêlé et de permettre à du CO2 provenant du sang veineux mêlé d'être rejeté dans l'air ambiant. Cette fonction d’hématose peut être divisée en deux mécanismes. Premièrement, la mécanique ventilatoire correspond à l’ensemble des structures et mécanismes qui permettent un acheminement de l’air extérieur vers les alvéoles, ainsi que le renouvellement du gaz alvéolaire. Deuxièmement, la diffusion alvéolocapillaire qui décrit l’échange à travers la membrane alvéolocapillaire de l’oxygène et du dioxyde de carbone. 
@@ -123,7 +123,7 @@ Le volume d'air insipiré (qui entre dans les poumons) est légèrement plus él
 
 Les gaz gagnent un côté de l'interface sang/gaz par les voies aériennes et le sang gagne l'autre côté par les vaisseaux sanguins.
 
-Ventilation
+### Ventilation
 Les voies aériennes :
 Les voies aériennes sont divisés en deux groupes,une zone de condution et une zone transitionnelle et repiratoire. La zone de condution débute par la traché suivi de bronche souche puis de muliple division associé à une réduction de qualibre de bronchioles au fur et à merue que l'on pénètre dans le poumon. La zone de conduction n'étant pas en contacte avec les alvéoles, elle ne participe pas au échange gazeux et forme lespace mort anatomique. Son volume est d'environ 150 mL environ. Ce volume peut être calculé à l'aide de la mesure de la concentration en CO2 dez gaz expiré.
 La région où s'effectuent les échanges corresond à la zone respiratoire composé des alvéoles mais également des bronchioles respiratoire des conduits alvéolaires et des sacs alvéolaires, formant une unité anatomique appelée acinus.
@@ -138,11 +138,18 @@ Perfusion pulmonaire - débit sanguin pulmonaire
 Hétérogénéité de perfusion - de débit sanguin en fonction de la localisation dans le poumon.
 Contôle actif de la circulation avec une vasoconstriction pulmonaire hypoxique lors de la baisse de la PO2 alvéolaire (hypoxie dans l'environnement des artères, avec de nombreux médiateur). Le mécanisme n'est pas encore clairement identifié.
 
-Diffusion
+### Diffusion
 
 Rapport ventilation-perfusion
 La ventilation et la perfusion pulmonaire ne sont pas homogènes mais varient principalement en fonction de forces gravitationnelles et donc de la position du patient.
 L’augmentation de la ventilation vers les bases est cependant moins importante que l’augmentation de la perfusion, si bien que le rapport entre la ventilation est la perfusion augmente de la base vers le sommet.
+
+Lois de diffusion 
+La diffusion d'un gaz à travers un tissu est régie par la loi de Fick: la diffusion est proportionnelle à la surface du tissu (S: 50 à 100 m2 pour la barrière alvéolo-capillaire) et inversement proportionnelle à l'épaisseur (E: 0,5 $\mu m$ pour la barrière alvéolo-capillaire) de ce tissu; elle est aussi proportionnelle au gradient de concentration ( ou de pression: P1 - P2) de part et d'autre du tissu; elle est enfin proportionnelle à une constante de diffusion (D) qui tient compte des caractéristiques du gaz (cette constante est proportionnelle à la solubilité du gaz (Sol) et inversement proportionnelle à la racine carrée de son poids moléculaire (PM). Cette constante de diffusion est 20 fois plus élevée pour CO2 que pour O2.
+$$ \dot{V}_{gaz} \sim \frac{S}{E}.D.(P_{1}-P_{2})$$
+où 
+$$ D \sim \frac{Sol}{\sqrt{PM}}$$
+
 
 
 
@@ -179,6 +186,34 @@ Comme mesures agrégées des propriétés mécaniques du poumons, $C_{l}$ et $R_
 
 [@roy2007calculating] :
 La structure du modèle présentée dans cet article est basée sur la physiologie et les paramètres du modèle ont des significations physiques claires. Comme tout modèle est basé sur des hypothèses, l'analyse du modèle doit être considérée dans ces limites. Une hypothèse est que les alvéoles peuvent être modélisées par un nombre limité de compartiments. Ceci est une simplification évidente, car les voies respiratoires humaines se composent de millions d'alvéoles. Celles-ci peuvent toutes avoir des propriétés différentes en termes de vidange ainsi que des taux d'échange de gaz et de ventilation-perfusion. Une autre hypothèse du modèle est que les tensions de CO2 alvéolaires et artérielles sont équilibrées. Par conséquent, toute limitation de la diffusion du CO2 sur la membrane capillaire alvéolaire est négligée. Bien que ces hypothèses puissent être justifiées dans des circonstances physiologiques normales, elles peuvent être moins valables dans les états pathologiques.
+
+
+
+
+[@west1988physiopathologie] :
+Inégalité ventilatoire en série et en parallèle (page 16).
+La vitesse de vidanve d'une region est détreminée par sa constante de temps qui est le produit de la résistance de sa voie aérienne (R) par sa compliance (C). Plus grande est la constante de temps (RC), plus longue sera la vidange.
+Ce mécanisme est décrit comme une inégalité de ventilation en parallèle dans le cardre d'une différecne de résistance entre deux régions ventilées par obstruction partielle des voies aéreinnes (bronchioles).
+Un autre mécanisme appelé inégalité de ventitation en série créer par des dilatations des voies aériennes périphériques qui provoquent des différences de ventilation le long des segments bronchiques desservant les unités pulmonaires. Ces régions mal ventilé par diminution de la diffusion des gaz inspirés compte tenu de l'atteinte des bronchioles terminale, se viderons en dernier.
+
+[@wagner1977ventilation]
+Une inégalité ventilation-perfusion est inévitable dans les BPCO, et ceci entraine une hypoxémie avec ou sans rétention de CO2. Typiquement, le patient de type A a seulement une hypoxémie modérée (entre 60 et 70 mmHg) et une PaCO2 normale. Par opposition, le patient de type B a une hypoxémie souvent sévère (entre 40 et 50 mmHg) avec une PaCO2 augmentée, surtout à un stade avancé de la maladie.
+La différence alvéolo-artérielle pour la PO2 est toujours augmentée, en particulier chez les patients souffrant d'une bronchite chronique sévère. Augmentation à la fois de l'espace mort physiologique et du shunt physiologique. L'espace mort est plus spécialement augmenté dans l'emphysème, alors que des valeurs élevèes de shunt sont particulièrement courante au cours de la bronchite chornique.
+
+A l'effort, la PO2 artérielle peut augmenter ou diminuer, selon les variations de la ventilation et du débit cardiaque, et les modificaitons dans la distribution de la ventilation et du débit sanguin. Chez quelques patients, le facteur principal de la chute de la PaO2 est une limitation du débit cardiaque ce qui, en présence d'une inégalité ventilation-perfusion, majore l'hypoxémie. Les patients qui ont une rétention de CO2 présentent souvent des valeurs de PaCO2 plus élevées à l'effort, en raison de la limitation de leur réposne ventilatoire.
+
+La lésion essentielle de l'emphysème centroacinaire est une dilatation des bronchioles respiratoires au milieu de l'acinius, ce qui est certainement une anomalie morphologique qui peut engendrer des inégalités en série. 
+
+Les effets délétères de l'obstruction des voies aériennes sur les échanges gazeux sont limités par la ventilation collatérale qui se produit chez ces patients. Des conduits de communication existent normalement entre les avléoles adjacentes et entre les petites voies aériennes voisine, fait provué expérimentalement. Chez ces patients, le faible débit sanguin allant aux unités non ventilées met en valeur l'efficacité de la ventilation collatérale, puisque certaines voies aériennes sont vraissemeblablement complétement fermées, en particulier dans la bronchite sévère.
+La vasoconstriction hypoxique et un autre facteur qui réduit l'importance de l'inégalité ventilation-perfusion. Cette réponse locale à une PO2 alvéolaire basse diminue le débit sanguin destiné aux régions faiblement ou non ventilées, minimisant l'hypoxémie artérielle. Lorsque des patients ayant une BPCO reçoivent des bronchodilatateurs, par un exemple du Sablutamol, une légère chute de la PaO2 se produit parfois. Ceci est probablement dû à l'action vasodilatatrice de ces médicaments qui augmente le débit sanguin des alvéoles faiblement ventilés. Ces constations sont encore plus nettes dans l'asthme.
+
+[@wagner1978ventilation,@ballester1989ventilation,@wagner1996gas] :
+L'hypoxémie artérielle est fréquente dans l'asthme. Elle est provoquée par une inégalité du rapport venitation-pefrusion (VA/Q). L'inégalité de ventilation est largement démontrée aussi bien par la méhtode en apnée  que par la méhtode du rinçage sur plusieurs cycles. De plus, les mesures avec le xénon radioactif montrent des régions hypoventilées, en particulier lorsqu'elles sont recherchées par l'enregistrement du débit d'entrée ou sortie du gaz. Des inégalités marquées de distribution du débit sanguin sont également observées, avec typiquement  des réductions transitoires concernant des zones différentes à des moments différents. L'espace mort physiologique et le shunt physiologique sont généralement tous les deux anormalement évevées. 
+Un exemple de ditribution des rapports veniltation-perfusion montre chez un asthmatique présentant des symptômes modérés, présente une distribution franchement différente d'une distribution ventilation-perfusion normale. Elle montre une distribution bimodale avec une part très importante (environ 25%) du débit sanguin total qui va aux uintés à bas rapport VA/Q (environ à 0.1), ce qui rend compte de l'hypoxémie modérée du patient. Après avoir bénéficié d'un aérosol bronchodilateur avec diminution du bronchospasme associée à une diminution des résistances respiratoires, une modification des rapport ventilation-perfusion apparait. Le débit sanguin allant aux alvéoles à bas VA/Q augmente de 25 à 50% du débit total avec comme conséquence une baisse de la PaO2.
+Le mécanisme de l'augmentation de l'hypoxémie semble être une levée de la vasonconstriction dans les zones faiblement venitlées. La chute de la PaO2 est associée à une augmentation de l'espace mort et du shunt physiologique. En pratique, les effets favorables de ces médicaments sur les voies aériennes excèdent de loin les desavantages d'une hypoxémie modérée supplémentaire.
+
+
+
 
 
 
@@ -260,7 +295,59 @@ knitr::include_graphics("figure/courbe_capno.png")
 
 
 ### Capnographie Volumétrique
-La capnographie volumétrique correspond à la PCO2 mesurée et exprimée en fonction du volume lors de la phase d’expiration. La terminologie utilisée pour les différentes phases, les transitions de phase, les angles et les pentes sont similaires pour la capnographie standard et la capnographie volumétrique. Le capnogramme volumétrique a été subdivisé en volume pour chaque phase (15)[@rayburn1994neural] et associé à des fonctions (16)[@tusman2011capnography] pour mieux caractériser de manière plus fiable la forme d'onde et produire des estimations dérivées avec une plus grande reproductibilité. L’analyse de la courbe de capnographie volumétrique permet d'estimer un certain nombre de mesures physiologiques et physiquement interprétables de la fonction respiratoire, telles que l'espace mort anatomique et physiologique ainsi que le rapport des deux, l'élimination du CO2 et le flux sanguin capillaire pulmonaire. Ces mesures permettent de découvrir de nombreux troubles cardio-respiratoires comme le syndrome de détresse respiratoire aiguë, la BPCO, l'asthme et l'embolie pulmonaire. Ces paramètres morphologiques, qui divisent le capnogramme volumétrique en phases I-III (17)[@fletcher1981concept], permet une caractérisation et une interprétation accrues du capnogramme volumétrique à l'aide d'un certain nombre de caractéristiques dérivées. L'un des intérêts de cette analyse est de permettre une mesure substitutive non invasive pour l'espace mort anatomique, l'espace mort des voies aériennes, estimé par la méthode de Fowler (18)[@fowler1948lung] qui utilise les parties centrales '' linéaires '' ajustées en phase III (par exemple, 40 à 80% du volume expiré) et la phase II. Cette mesure permet de calculer l'espace mort des voies respiratoires sur une base respiratoire pour chaque patient plutôt que de compter sur la règle plus approximative de 1 mL/kg d’espace mort en fonction du poids. Brewer et al. (19)[@brewer2008anatomic] a constaté que cette règle, dérivée des moyennes de population, par rapport à l'espace mort mesuré de la voie aérienne, ne présentait aucune corrélation (r2 = 0,0002). Au fil du temps, les chercheurs s'inquiètent de l'effet des variations de mesure sur les estimations du volume de l'espace mort de la méthode Fowler et de la variation résultante de ces paramètres calculés. Cela a conduit au développement de méthodes à faible dispersion, qui comprenaient l'ajustement du volume expiratoire de CO2 par rapport à la courbe de volume expiratoire entre 40 et 80% du volume expiré en utilisant des polynômes de première, seconde et troisième ordre (20)[@tang2007systematic]. Plus récemment, un ajustement rapide du capnogramme volumétrique à l'aide d'une approximation fonctionnelle déterminée avec un algorithme non linéaire de moindres carrés a été utilisé (16)[@tusman2011capnography], ce qui a entraîné une diminution de la variabilité respiratoire intra-patient ainsi que la dispersion des paramètres calculés. Les caractéristiques discutées dans cette section sont destinées à être interprétées en utilisant des concepts physiologiques ou cliniques connus.
+La capnographie volumétrique correspond à la PCO2 mesurée et exprimée en fonction du volume lors de la phase d’expiration. La terminologie utilisée pour les différentes phases, les transitions de phase, les angles et les pentes sont similaires pour la capnographie standard et la capnographie volumétrique. Le capnogramme volumétrique a été subdivisé en volume pour chaque phase (15)[@rayburn1994neural] et associé à des fonctions (16)[@tusman2011capnography] pour mieux caractériser et de manière plus fiable la forme d'onde ainsi que produire des estimations dérivées avec une plus grande reproductibilité. L’analyse de la courbe de capnographie volumétrique permet d'estimer un certain nombre de mesures physiologiques et physiquement interprétables de la fonction respiratoire, telles que l'espace mort anatomique et l'espace mort physiologique ainsi que le rapport des deux, l'élimination du CO2 et le flux sanguin capillaire pulmonaire. Ces mesures permettent de découvrir de nombreux troubles cardio-respiratoires comme le syndrome de détresse respiratoire aiguë, la BPCO, l'asthme et l'embolie pulmonaire. Ces paramètres morphologiques, qui divisent le capnogramme volumétrique en phases I-III (17)[@fletcher1981concept], permet une caractérisation et une interprétation accrues du capnogramme volumétrique à l'aide d'un certain nombre de caractéristiques dérivées. L'un des intérêts de cette analyse est de permettre une mesure substitutive non invasive pour l'espace mort anatomique, l'espace mort des voies aériennes, estimé par la méthode de Fowler (18)[@fowler1948lung] qui utilise les parties centrales '' linéaires '' ajustées en phase III (par exemple, 40 à 80% du volume expiré) et la phase II. Cette mesure permet de calculer l'espace mort des voies respiratoires sur une base respiratoire pour chaque patient plutôt que de compter sur la règle plus approximative de 1 mL/kg d’espace mort en fonction du poids. Brewer et al. (19)[@brewer2008anatomic] a constaté que cette règle, dérivée des moyennes de population, par rapport à l'espace mort mesuré de la voie aérienne, ne présentait aucune corrélation (r2 = 0,0002). Au fil du temps, les chercheurs s'inquiètent de l'effet des variations de mesure sur les estimations du volume de l'espace mort de la méthode Fowler et de la variation résultante de ces paramètres calculés. Cela a conduit au développement de méthodes à faible dispersion, qui comprenaient l'ajustement du volume expiratoire de CO2 par rapport à la courbe de volume expiratoire entre 40 et 80% du volume expiré en utilisant des polynômes de première, seconde et troisième ordre (20)[@tang2007systematic]. Plus récemment, un ajustement rapide du capnogramme volumétrique à l'aide d'une approximation fonctionnelle déterminée avec un algorithme non linéaire de moindres carrés a été utilisé (16)[@tusman2011capnography], ce qui a entraîné une diminution de la variabilité respiratoire intra-patient ainsi que la dispersion des paramètres calculés. Les caractéristiques discutées dans cette section sont destinées à être interprétées en utilisant des concepts physiologiques ou cliniques connus.
+
+
+
+++++++
+(Corrections of Enghoff’s dead space formula for shunt effects still overestimate Bohr’s dead space, [@suarez2013corrections])
+Conceptuellement, l'inefficacité de la ventilation chez les patients sous ventilation mécanique est évaluée par l'espace mort. Elle est définie comme la partie de la ventilation qui ne participe pas aux échanges gazeux (Bohr, 1891; Fletcher et Jonson, 1981; Bartels et al., 1954; Fletcher, 1985). Toute augmentation de l'espace mort réduit la clairance du dioxyde de carbone (CO2), ce qui rend les patients prédisposés à l'hypercapnie, ce qui doit être compensé par une augmentation de la ventilation totale.
+En 1891, Bohr propose une formule pour calculer le rapport espace mort / volume courant (Vd / Vt) en utilisant du CO2 expiré mixte (Bohr, 1891).
+Il a postulé que le degré de dilution du CO2 dans les poumons, déterminé par la différence entre les pressions partielles alvéolaires moyennes (PACO2) et mixtes expirées (PEtCO2), était proportionnel à la quantité d'espace mort. En raison des difficultés pratiques rencontrées pour mesurer la pression partielle alvéolaire de CO2 (PACO2), Enghoff a modifié la formule originale de Bohr en utilisant artériel comme substitut de la PCO2 alvéolaire (PaCO2), en se référant au concept de Riley d'un poumon idéal (Enghoff, 1938; Riley et Cournand. , 1949, 1951). Cependant, l'utilisation de PaCO2 nécessite non seulement un prélèvement de gaz de sang artériel invasif, mais est également affectée par la présence d'un shunt de droite à gauche. Lorsque les concentrations élevées de CO2 dans le sang veineux atteignent le côté artériel via les voies de dérivation intrapulmonaires, PaCO2 augmente au-dessus de PACO2. Cela fait de PaCO2 un paramètre inapproprié pour calculer l'espace mort, en particulier à des niveaux de shunt élevés (Fletcher et Jonson, 1981; Suter et al., 1975; Wagner, 2008).
+Pour la surveillance des patients ventilés mécaniquement, les sacs de Douglas traditionnels sont désormais remplacés par la capnographie volumétrique (VCap), la courbe du CO2 expiré sur le volume courant (Fig. 1) (Fletcher et Jonson, 1981; Sinha et Soni, 2012). Bien que l'on puisse facilement estimer PEtCO2 à partir de VCap, on pensait qu'il n'était pas possible d'en déduire des estimations précises de PACO2 (Fletcher et Jonson, 1981; Enghoff, 1938). Cependant, nous avons récemment introduit et validé une méthode basée sur VCap pour estimer PACO2. Il permet une évaluation non invasive, souffle après souffle, de l’espace mort de Bohr (Tusman et al., 2011a, b).
+Plusieurs auteurs ont décrit des approches mathématiques pour corriger l’équation de shunt d’Enghoff (Kuwabara et Duncalf, 1969; Mecikalski et al., 1984; Torda et Duncalf, 1974; Niklason et al., 2008). Cependant, ces corrections ont été développées sur des bases théoriques uniquement. À notre connaissance, la validation de tels algorithmes à l'aide de données biologiques réelles fait encore défaut.
+Nous avons émis l’hypothèse que si les espaces morts d’Enghoff étaient corrigés du shunt, ils devraient donner des valeurs similaires à celles obtenues par l’équation originale de Bohr. Le but de ce travail était de vérifier cette hypothèse dans une cohorte d’animaux à ventilation mécanique, dans laquelle différents degrés de shunts et d’espaces morts étaient induits par des lavages pulmonaires et une large gamme de pressions expiratoires aux extrémités positives (PEEP).
+
+++++++
+
+
+
+
+Espace Mort Physiologique - $V_{D_{phys}}$
+$$V_{D_{phys}}=V_{D_{aw}}+V_{D_{alv}}$$
+
+
+
+Equation de BOHR :
+Correspond au rapport du Volume de l'Espace Mort Physiologique ($V_{D_{phys}}$) par rapport au volume courant $V_{T}$
+$$\frac{V_{D}}{V_{T}}=\frac{(P_{A}CO2-P\overline{E}CO2)}{P_{A}CO2}$$
+
+Equation de ENGHOFF :
+En considéréant que la $P_{A}CO2$ est égale à la $P_{a}CO2$ on en déduit :
+$$\frac{V_{D}}{V_{T}}=\frac{(P_{a}CO2-P\overline{E}CO2)}{P_{a}CO2}$$
+
+
+
+Principales Caractéristiques de la Capnographie Volumétrique :
+
+  * $P_{ET}CO2$ : pression partielle de CO2 en fin d'expiration
+  * $P_{A}CO2$ : pression partielle de CO2 alvéolaire
+  * $P\overline{E}CO2$ : pression partielle moyenne de CO2 expiré 
+  * $V_{D_{phys}}$ : volume de l'espace mort physiologique
+  * $V_{D_{aw}}$ : volume de l'espace mort anatomique
+  * $V_{D_{alv}}$ : volume de l'espace mort alvéolaire
+  * $V_{T}CO2$ : aire sous la courbe correspond à 
+  * $V_{Talv}$ : volume alvéolaire
+  * $S_{II}$ :
+  * $S_{III}$ :
+
+
+
+
+
+
+
+
 
 
 ### Pathologies respiratoires et courbes de capnographie
@@ -641,7 +728,7 @@ Au cours de l'exécution de l'algorithme de cluster, les modèles ont tendance �
 Une des principale problématique en anesthésie pour la surveillance ventilatoire en utilisant la capnographie est l'apparition d'artefact. Ces derniers sont généralement dû à des oscillations cardiogénqiues entraiant un défaut de reconnaissance de l'EtCO2 mais également de la fréquence respiratoire. Un capnographie de type _Engström Eliza capnographe_ a été utilisé pour réaliser les enregistrement par voie nasale sur des sujets présentant un syndrome obstructif. Le but de l'étude était d'évaluer un algorithme de reconnaissance et de correction des artéfacts par oscillations cardiogéniques, et de le comparer à un autre système de détrection des artéfacts : CAPNOG.
 Les artéfacts par oscillations cardiogérniques sont facillement reconnaissable à partir de capnogramme seul.  Il présentent les caractéristiques suivantes : ils ont toujours une forme lisse, avec une montée et une descente rapide, sans aucun plateau inspiratoire ni expiratoire. Le pic de chaque oscillation est inférieur au pic précédent, bien que la première puisse parfois être légèrement supérieure à la valeur d'EtCO2 de la respiration dont elle est issue. Le minimum de la première oscillation est toujours supérieur au minimum de la vraie phase inspiratoire précédente. Avec les oscillations suivantes, ce minimum diminue généralement jusqu'à atteindre les niveaux de gaz inspiré. La caractéristique la plus spécifique des oscillations cardiogéniques est leur courte durée, avec une fréquence égale à la fréquence cardiaque sous-jacente.
 L'algorithme développé repose sur l'association de chaque expiration associée à l'inspiration suivante en un cycle. L'algorithme analyse le tracé de capnographie cycle par cycle en utilisant comme paramètres l'EtCO2, les temps inspiratoire (Tb) et expiratoire (Ta) ,et le taux de CO2 minimal lors de la phase inspiratoire (Minco2).
-L'algorithme compare les respirations entre elle en réalisant un système de classement et de validation en cycles normaux et en cycles présenant des artéfacts en rapport avec des oscillations cardiogréniques. Lorsque l'agorithme reconnait un clycle comme un artéfact d'oscillation cardiogénique, ce dernier est intégré au dernier cycle valide en intégrant son temps et en lui appliquant l'EtCO2 du cylce précédent. Ce cycle respiratoire reconstitué sera considéré comme le dernier cycle valide. Pour qu'un cycle soit identifier comme une oscillation cardiogénique, il doit satisfaire les l'ensemble des critères que resprésente les conditions 1 à 4. Cette reconnaissance (analyse) se fait en deux étapes. Une première applique les conditions 1 et 2 à l'ensemble des cycles. Secondairement, les condition 3 et 4 ne sont appliqués que si le dernier souffle lu a été évalué comme étant un véritable souffle.
+L'algorithme compare les respirations entre elle en réalisant un système de classement et de validation en cycles normaux et en cycles présentant des artéfacts en rapport avec des oscillations cardiogréniques. Lorsque l'agorithme reconnait un clycle comme un artéfact d'oscillation cardiogénique, ce dernier est intégré au dernier cycle valide en intégrant son temps et en lui appliquant l'EtCO2 du cylce précédent. Ce cycle respiratoire reconstitué sera considéré comme le dernier cycle valide. Pour qu'un cycle soit identifier comme une oscillation cardiogénique, il doit satisfaire les l'ensemble des critères que resprésente les conditions 1 à 4. Cette reconnaissance (analyse) se fait en deux étapes. Une première applique les conditions 1 et 2 à l'ensemble des cycles. Secondairement, les condition 3 et 4 ne sont appliqués que si le dernier souffle lu a été évalué comme étant un véritable souffle.
         
   * Condition 1 : Last-valid-breath.Tb + Current-breath.Ta $\leqslant 1.2 sec$
   * Condition 2 : Current-breath.EtCO22 $\leqslant$ Last-valid-breath.EtCO2 + 0.15%CO2
@@ -678,7 +765,7 @@ Les modifications de la distribution ventilation-perfusion V/Q influencent radic
 
 $$ 
  \dot{V} =     \left\{ \begin{array}{rcl}
-         -\gamma_{1}V_{T}\mathrm{e}^{-\gamma_{1}(t-T_{1})} & T_{1}<t\leqslant T_{E,1}
+         -\gamma_{1}V_{T}\mathrm{e}^{-\gamma_{1}(t-T_{I})} & T_{I}<t\leqslant T_{E,1}
          \\ -\gamma_{2}V_{T_{E,1}}\mathrm{e}^{-\gamma_{2}(t-T_{E,1})} & T_{E,1}<t\leqslant T
                 \end{array}\right.
 $$ 
