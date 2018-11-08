@@ -319,12 +319,19 @@ $$V_{D_{phys}}=V_{D_{aw}}+V_{D_{alv}}$$
 
 
 Equation de BOHR :
+Christian Bohr a été le premier à décrire l'espace mort en 1891.
 Correspond au rapport du Volume de l'Espace Mort Physiologique ($V_{D_{phys}}$) par rapport au volume courant $V_{T}$
 $$\frac{V_{D}}{V_{T}}=\frac{(P_{A}CO2-P\overline{E}CO2)}{P_{A}CO2}$$
 
 Equation de ENGHOFF :
+Enghoff a remplacé la $P_{A}CO2$ par la $P_{a}CO2$, cette simplification pratique et brillante est devenu la méthode de référence au lit du malade. Néamoins, elle reste une technique invasive avec la nécessité d'une gazométrie artérielle pour recueillir la valeur de $P_{a}CO2$.
 En considéréant que la $P_{A}CO2$ est égale à la $P_{a}CO2$ on en déduit :
 $$\frac{V_{D}}{V_{T}}=\frac{(P_{a}CO2-P\overline{E}CO2)}{P_{a}CO2}$$
+
+Equation de FLETCHER : 
+L'introduction de VCap par Fletcher et al. ont encore simplifié la mesure clinique de l'espace mort. Fletcher et al. [16] [@fletcher1981concept] suggèrent que PACO2 pourrait théoriquement être obtenu à partir de la partie médiane de la phase III du capnogramme volumétrique, une idée confirmée par la suite par Breen et al. Heureusement, le concept d’obtention de PACO2 à partir de la moitié de la phase III a récemment été validé par rapport à la technique d’élimination multiple des gaz inertes (MIGET) [19][@tusman2011validation].
+Maintenant que cette limitation majeure a été surmontée, il est possible d’obtenir des mesures fiables et de manière non-invasive, de l'espace mort physiologique (VDPhys) par Capnographie Volumétrique (VCap).
+Bien que la plupart des méthodes actuelles s’appuient sur l’approche géométrique de Fowler, la forme du capnogramme peut grandement affecter sa précision. Par conséquent, de nouvelles approches mathématiques ont été proposées pour améliorer la robustesse de la détermination de VDaw [35][@tusman2009model]. Une fois que VDphys et VDaw sont connus, VDalv se calcule facilement en soustrayant simplement VDaw de VDphys.
 
 
 
@@ -337,9 +344,10 @@ Principales Caractéristiques de la Capnographie Volumétrique :
   * $V_{D_{aw}}$ : volume de l'espace mort anatomique
   * $V_{D_{alv}}$ : volume de l'espace mort alvéolaire
   * $V_{T}CO2$ : aire sous la courbe correspond à 
-  * $V_{Talv}$ : volume alvéolaire
+  * $V_{Talv}$ ou $V_{T_{alv}}$ : volume alvéolaire (ou volume courant alvéolaire)
   * $S_{II}$ :
   * $S_{III}$ :
+  * $V_{D_{alv}}/V_{T_{alv}}$ : fraction efficace du volume courant alvéolaire (ou plutôt fraction inefficace) correspond à un indice d'efficacité du compartiement alvéolaire
 
 
 
