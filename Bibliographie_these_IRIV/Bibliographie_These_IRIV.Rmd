@@ -74,18 +74,98 @@ Dans ce but, nous établiront dans un premier temps l’état des connaissances 
 ------------------------------------------------------------------------------------------
 
 
-# Première Partie - Pathologie Obstructive
+# Première Partie - Physiologie & Physiopathologie du Poumon 
 
 ## Rappel d'Anatomie et de Physiologie Respiratoire
 
 
-## Maladie Obstructive
+
+
+
+## Physiopathologie Pulmonaire
+
+### Asthme
+
+
+### Bronchite Chronique Obstructive - BPCO
+
+
+### Emphysème
+++++++++
+L’emphysème pulmonaire affecte les bronchioles respiratoires, les canaux alvéolaires, les sacs alvéolaires et les alvéoles, qui forment l’unité fonctionnelle «acinus». Il implique une destruction des parois alvéolaires, ce qui se traduit non pas par une fibrose, comme c’est le cas dans certaines pneumopathies interstitielles, mais par une raréfac- tion des alvéoles et du lit vasculaire, et ainsi par une ré- duction de la surface d’échange gazeux.
+Les différents sous-types d’emphysème sont définis sur la base de la structure touchée du lobule pulmonaire (= acinus). L’emphysème «centrolobulaire» (également appelé «centro-acinaire) touche les bronchioles respiratoires, c.-à-d. la partie proximale de l’aci- nus. L’emphysème centrolobulaire, qui est la forme la plus fréquente d’emphysème pulmonaire, est le plus souvent associé au tabagisme et il est fréquemment localisé dans les zones apicales des poumons. En cas d’emphysème «panlobulaire» (également appelé «panacinaire»), l’ensemble de l’acinus est touché. Cette forme d’emphysème peut soit représenter la forme terminale d’un emphysème associé au tabagisme, soit être par ex. causée par un déficit en alpha-1-antitryp- sine (AAT). L’emphysème "paraseptal" (également appelé «acinaire distal») affecte principalement les canaux alvéolaires.
+La distribution de l’emphysème est également évaluée, avec une distinction faite entre emphysème «homo- gène» et emphysème «hétérogène». En cas d’emphy- sème homogène, les lobes pulmonaires présentent des altérations «emphysémateuses» réparties de façon relativement uniforme, alors qu’en cas d’emphysème hétérogène, les altérations emphysémateuses pré- dominent nettement au niveau d’un lobe pulmonaire ou de segments d’un lobe. Outre l’atteinte des voies aériennes terminales et des alvéoles, il convient de noter que l’emphysème est souvent associé à des patho- logies des voies aériennes plus proximales, typique- ment à des épaississements des parois bronchiques, à des bronchectasies, à une impaction mucoïde ou à des bronchiolites. L’association d’altérations des alvéoles et d’altérations des voies aériennes est responsable de la variabilité d’un trouble ventilatoire obstructif asso- cié. Cette relation est illustrée dans le «diagramme de Venn» (fig. 1), qui décrit les liens et chevauchements entre la bronchite chronique, l’emphysème, la BPCO, l’asthme, la fibrose pulmonaire et d’autres affections impliquant une limitation du flux respiratoire.
+
+
+++++
+
+Syndromes de chevauchement
+Comme préalablement évoqué, il existe différentes formes mixtes associant d’autres entités pneumolo- giques et l’emphysème pulmonaire. Il est par ex. question de «combined pulmonary fibrosis and emphysema» (CPFE) en présence d’une association de fibrose pulmo- naire et d’emphysème pulmonaire. La forme mixte associant asthme et BPCO (avec ou sans emphysème pulmonaire) est appelée «asthma-COPD-overlap» (ACO).
+
+++++
+
+Conséquences physiopathologiques
+En raison de la réduction de la surface disponible pour les échanges gazeux qui se produit dans l’emphysème pulmonaire, la capacité de diffusion des poumons diminue au fur et à mesure que l’emphysème pulmonaire progresse. Il peut en résulter des hypoxémies. Il peut également y avoir une altération, à des degrés variables, des volumes pulmonaires statiques et dynamiques, en fonction du «phénotype global» (fig. 1). La diminution des forces de rappel élastique («lung elastic recoil») du parenchyme pulmonaire favorise la survenue d’une obstruction bronchique. En fonction de l’étiologie et de l’ampleur des facteurs associés, différents mécanismes physiopathologiques peuvent influencer le tableau clinique et avoir un impact sur les options thérapeutiques sélectionnées:
+– trouble ventilatoire obstructif irréversible en cas de BPCO concomitante;
+– trouble ventilatoire obstructif (partiellement) réversible en présence d’un asthme bronchique ou d’un ACO;
+– hyperinflation statique et/ou dynamique;
+– altération de la clairance mucociliaire : impaction mucoïde;
+– altération du microbiome pulmonaire : infections; 
+– «mismatch» ventilation-perfusion;
+– hypertension pulmonaire (HP), groupe 3 de l’OMS; 
+– hypoxémie – insuffisance respiratoire de type 1;
+– hypercapnie – insuffisance respiratoire de type 2.
+
+++++
+
+
+
+
+### Dilatation Des Bronches - DDB
+
+
+### Bronchiolite Chronique
+
+
+### Fibrose Pulmonaire
+
+
+### Sarcoidose
+
+### Lobectomie - Pneumectomie
+
+### HTAP
+
+### SDRA
+
+### OAP
+
+
+
+
+
+
+
+
+#### Phatologies Restrictives
+
+
+#### Pathologies Obstructives
 
 
 Les pathologies respiratoires obstructives comme l'Asthme et la Bronchite Chronique Obstructive sont un enjeu de santé publique.
 L'asthme est une inflammation chronique des bronches, entrainant leur hyperréactivité à certaines substances. La maladie se manifeste par des crises, sous forme de sifflements et de gênes respiratoires. Dans les cas les plus graves, ces crises peuvent nécessiter une hospitalisation. Les dernières enquêtes nationales montrent une prévalence cumulée de l'asthme de plus de 10 % chez l'enfant âgé d'au moins dix ans et une prévalence de l'asthme actuel de 6 à 7 % chez l'adulte. En 2006, sont survenus 1038 décès par asthme en France. Après un pic observé dans les années 1980, la mortalité par asthme a diminué. Cette diminution est également observée chez les enfants et adultes jeunes. Selon les données du PMSI, on dénombre, en 2007, 54 130 séjours pour asthme dont plus de la moitié chez des moins de 15 ans. Entre 1998 et 2007, le taux annuel standardisé d'hospitalisation pour asthme a diminué. Les données sur les recours aux urgences permettent de documenter d'importantes variations saisonnières des exacerbations d'asthme (1-3). L'Asthme Aigu Grave (AAG), forme particulièrement grave d'épisodes aigus des crises d'asthme, représente entre 8 000 et 16 000 hospitalisations par an en France. Elle nécessite une ventilation dans 13% des cas. La mortalité est en diminution mais reste non négligeable avec 1 500 à 2 000 morts par an soit 4 pour 100 000 habitants en 1990 contre 5,75 en 1970, associé à des conséquences médico-économiques lourdes. (6).
 La Bronchite Chronique Obstructive (BPCO) est une cause majeure de mortalité et d'incapacité dans le monde entier. Deux aspects anatomiques sont caractéristiques de la maladie : l'obstruction des bronches et les destructions du parenchyme pulmonaire. Le diagnostic de BPCO ne peut être posé qu'après mesure de la fonction respiratoire par des Explorations Fonctionnelles Respiratoires (EFR) qui identifient un rapport expiratoire maximal seconde/capacité vitale (VEMS/CV) < 70% ; ceci après inhalation de bronchodilatateur. A la différence, la bronchite chronique est définie par la présence d'une toux productive durant 3 mois, pendant 2 années consécutives, mais sans retentissement sur la fonction respiratoire (8). En moyenne, 5 à 15% des adultes dans les pays industrialisés ont une BPCO définie par spirométrie. En 1990, on considérait que la BPCO occupait la douzième place mondiale en tant que cause de mortalité et d'invalidité combinées, mais on s'attend à ce qu'elle devienne la cinquième cause d'ici 2020. (7). 
 Selon l'INSERM en 2000, on estimait à 1,7 million le nombre de personnes atteintes de BPCO en France, soit 4,1% de la population. Cette proportion monte à 7,5% chez les plus de 40 ans. La maladie est plus fréquente chez les fumeurs, le tabac étant le principal facteur de risque. De par le développement du tabagisme féminin, la BPCO concerne aujourd'hui presque autant de femmes que d'hommes. En 2013, environ 145 000 personnes atteintes de formes sévères de la maladie bénéficiaient d'une oxygénothérapie de longue durée (associée ou non à un traitement par ventilation). La BPCO entraine en outre chaque année de nombreuses hospitalisations et des décès liés aux exacerbations de la maladie (poussées d'aggravation des symptômes habituels). En 2013, entre 95 000 et 145 000 hospitalisations liées à la maladie ont été comptabilisées en France, et environ 16 000 décès par an, en moyenne, ont été enregistrés sur la période 2000-2011. La mortalité associée à la maladie stagne malgré les progrès de la prise en charge, probablement en raison d'un sous-diagnostic de la maladie ou de diagnostics trop tardifs. (9-10).
+
+
+
+
+
+
+
+
+
 
 
 
@@ -219,6 +299,23 @@ Le mécanisme de l'augmentation de l'hypoxémie semble être une levée de la va
 
 
 ## Modèle mathématique de poumon
+
+Modèle mathématique le plus simple fréquemment utilisé est le modèle _monocompartiemental_. Modèle connu et utilisé depuis longtemps, le flux d'air est proportonnel à la différence de pression entre la pression alvéolaire $P_{A}$ et la pression à la bouche $P_{atm}$. La constante de proportionnnalité correspond à la résistance $R$ de l'arbre bronchique à l'écoulement. Cette résistance dépend de la dimensions du tube (longueur et surface) et de la viscosité du fluide. Plus le tube est long et fin plus il est difficile de faire passer de l'air dans ce dernier. On peut exrpimé cela par une équation correspondant à la Loi de Poiseuille :
+
+$$ P_{atm}-P_{A}=R\dot{V} $$
+
+Par ailleurs le volume du « ballon » dépend de l’élastance des tissus (notée E) et des forces qui lui sont appliquées (ici la pression alvéolaire $P_{A}$ et la pression $P$ exercée par le diaphragme). Cela s’exprime par une autre équation traduisant l’équilibre élastique du ballon :
+
+$$ P_{A}-P=EV $$
+
+On en déduit en combinant les deux équations, un modèle décrivant l'évolution du volume du ballon au cours tu temps :
+
+$$ P_{atm}-P=R \dot{V}+EV $$
+
+Il s’agit d’une équation différentielle puisqu’elle fait intervenir à la fois le volume $V$ et sa variation $\dot{V}$, linéaire, et on sait en calculer explicitement la solution.
+
+
+
 
 
 
