@@ -947,6 +947,15 @@ Une hypothèse est que les alvéoles peuvent être modélisées par un nombre li
 
 
 
+### Influence of chest compression artefact on capnogram-based ventilation detection during out-of-hospital cardiopulmonary resuscitation [@leturiondo2018influence]
+
+
+
+
+
+
+
+
 
 ## Discussion 
 
