@@ -949,12 +949,30 @@ Une hypothèse est que les alvéoles peuvent être modélisées par un nombre li
 
 ### Influence of chest compression artefact on capnogram-based ventilation detection during out-of-hospital cardiopulmonary resuscitation [@leturiondo2018influence]
 
+Les cas d'ACR ont été enregistrés avec des défibrillateurs-moniteur Heartstart MRx (Philips, USA), équipés de la technologie de rétroaction de RCP en temps réel _(Q-CPR)_. La capnographie a été enregistré à l'aide d'un capteur Sidestream (Microstream, Oridion Systems Ltd., Israël). La ventilation était assurée par BAVU avec réserve après intubation. Les choix pour ce dernier étaient la sonde endotrachéale ou le King LT-D (supraglottique). Les signaux de défibrillateur utilisés dans l'étude étaient le capnogramme, le signal de profondeur de compression (CD) mesuré par le pavillon thoracique Q-CPR et le signal d'impédance transthoracique (TI) acquis à partir des électrodes de défibrillation.
+Les enregistrements inclus dans l'études présentaient un minimum de 500 compressions cardiaques et 20 minutes d'enregistrement continues sur l'ensemble des signaux. Sur ces critères d'inclusions 301 cas d'ACR ont pu être inclus. Les intervalles avec un signal TI brut ou un capnogramme non fiable causé par des déconnexions ou un bruit excessif ont été ignorés/éliminés. Pour chaque épisode, les capnogrammes ont été décalés dans le temps pour compenser le retard par rapport aux signaux CD et TI. 
+Trois ingénieurs biomédicaux expérimentés dans l'analyse des signaux de défibrillateurs hors domicile ont participé au processus d'annotation. Ils ont examiné conjointement un tiers des cas et défini les règles d'annotation permettant d'identifier les capnogrammes déformés par un artefact de compression thoracique et d'annoter les ventilations à l'aide du signal TI. Les autres épisodes ont été divisés au hasard en trois parties, chacune examinée par un seul examinateur. Au terme de ce processus, les trois experts se sont à nouveau réunis pour résoudre par consensus les annotations indécises.
+Les experts ont annoté les intervalles dans lesquels les capnogrammes étaient déformés par un artefact de compression thoracique, avec l'aide du signal CD. Les épisodes ont été classés comme étant déformés si un artefact de compression thoracique apparaissait pendant plus de 1 minute du temps de compression thoracique. En outre, ils ont annoté la localisation de l’artéfact par rapport à la phase respiratoire (par exemple, apparaissant principalement sur la phase expiratoire ou sur la phase inspiratoire).
+Les ventilations ont été annotées manuellement en utilisant la composante basse fréquence du signal TI. Un filtre passe-bas a été appliqué au signal TI brut pour supprimer les oscillations rapides causées par des compressions thoraciques et améliorer les fluctuations lentes causées par les ventilations. La Fig. 1 (panneau supérieur) montre le signal TI brut en gris avec le composant TI basse fréquence superposé en bleu. Chaque ventilation a été annotée à l’instant correspondant à une augmentation de chaque fluctuation de l’IT (marquée d’une ligne rouge pointillée verticale sur la Fig. 1). Le capnogramme est représenté dans le panneau inférieur pour confirmer visuellement la présence de ventilations. Les annotations obtenues ont été utilisées comme référence pour tester les performances de l'algorithme de détection de ventilation automatisé basé sur le capnogramme.
+L'algorithme utilisé dans cette étude traite le capnogramme et a été conçu selon un modèle de machine à états finis. La figure 2 montre l'organigramme de l'algorithme (en haut) et la définition des principaux paramètres de l'algorithme (en bas).
+Le principe de l'aglorithme se base sur la recherche de modification/changement brusque de courbe de capnographie. Le début du capnogramme $t_{up}^{i}$ est détrecté lorsqu'une la valeur du capnogramme dépasse un seuil fixé $Th_{amp}$ en mmHg. De même pour la fin du capnogramme $t_{dw}^{i}$ lorsque la valeur du capnogramme passe sous le seuil le même seuil $Th_{amp}$.
+Pour détecter une ventilation, la durée de l'intervalle $D_{ex}=t_{dw}^{i}-t_{up}^{i}$ et la durée de l'intervalle $D_{in}=t_{up}^{i+1}-t_{dw}^{i}$ doivent dépasser les seuils $Th_{ex}$ et $Th_{in}$, respectivement. Si les deux conditions sont remplies, la ventilation est annotée au moment où survient le début de l'inspiration, $t_{dw}^{i}$. Pour prendre en compte les effets de double ventilation observés (Fig. 2, en bas à droite), l'algorithme élimine toute ventilation pour laquelle l'intervalle $D_{in}$ est inférieur à $Th_{in}$ et recherche le prochain mouvement descendant et montant jusqu'à ce que $D_{in}$ dépasse $Th_{in}$.
+La performance diagnostique de l'algorithme a été évalué à l'aide des données annotés par les experts comme valeur de référence. Les sensibilité et valeur prédictive positive (VPP) ont été calculées. Se a été défini comme la proportion de ventilations annotées détectées par l'algorithme. Le VPP était la proportion de détections qui étaient bien des ventilations annotées. Une tolérance de $\pm0.5s$ entre les temps de détrections et d'annotation a été accpeté. L'algorithme a été entraîné avec un sous-ensemble de cas sans perturbation du signal de capnographie, cherchant la sensibilité maximal tout en assurant une VPP > 98%.
+Afin d'évaluer l'influence des artéfacts sur l'estimation du taux de ventilation, nous avons calculé, pour chaque épisode, la valeur du taux de ventilation par minute, actualisée toutes les 10 s. Ces mesures du taux de ventilation ont été calculées à l'aide du gold-standard (ventilations annotées) et des ventilations détectées par notre algorithme.
+Nous avons également calculé des alarmes d’hyperventilation à partir des mesures du taux de ventilation par minute. Les résultats ont été obtenus pour des seuils d'hyperventilation fixés à 10, 15 et 20 par minute. Nous avons ensuite testé la capacité de notre algorithme à détecter correctement l’hyperventilation. Dans ce cas, la Se a été défini comme la proportion d'alarmes d'hyperventilation annotées fournies par l'algorithme, et le VPP comme la proportion d'alarmes d'hyperventilation donnée qui ont été effectivement annotées.
+Enfin, la morphologie de l'artefact a été caractérisée par l'analyse spectrale de capnogrammes propres et déformés/artéfactés. Nous avons calculé la densité spectrale de puissance (DSP) du capnogramme et localisé les composantes de fréquence/spectrales associées aux artefacts. Nous avons utilisé le taux de compression thoracique dérivé du signal CD comme référence.
+Sur les 301 capnogrammes selectionnés 69 ont été éliminés par manque de fiabilité de l'enregistrement. Au final sur les 232 cas retenu la durée moyenne des enregistrements était de 31 $(\pm9.5)$ min, avec une moyenne de 2301 $(\pm1230)$ compressions thoraciques annotées par enregistrement. Quatre-vingt-dix-huit enregistrement (42%) étaient artéfactés. Les artéfacts ont été classés en trois type : observé principalement sur le plateau expiratoire du capnogramme (type I), au niveau de la ligne de base (type II) et étendu au plateau et à la ligne de base (type III).
+Après analyse spectrale pour caractériser la nature en forme d'onde de l'artefact de compression thoracique un pic primaire est clairement observé à 1,94 Hz, sans composantes harmoniques. Cette valeur correspond à la fréquence fondamentale des artefacts, $f_{art}$, et correspond au taux de compression moyen dans cet intervalle ($f_{art}$ x 60 = 116 compressions par minute). Cela montre que les artefacts est principalement des signaux sinusoïdaux et qu'ils sont directement causés par des compressions thoraciques pendant la RCP.
+L'ensemble des trois types d'artéfacts ont été retrouvé lorsqu'un contrôle avancé des voies aériennes était en place quelqu'il soit (intubation ou autre), avec une incidence plus élevé avec les dispositifs supra-glottique. Ils n'étaient pas visible lors de l'utilisation d'un masque de ventilation simple. L'algorithme de détection de la ventilation a été entraîné avec un sous-ensemble de 30 cas sans artefacts. Les valeurs optimales pour les paramètres de l'algorithme $Th_{ex}$ et $Th_{in}$ ont été obtenues pour un Se/PPV de 99,8/99,0%. Les performances de l'algotihme après application à la population test globale étaient, en mediane (IQR), de 99.4% (97.8–100) pour la Se, et de 98.6% (96.4–99.5) pour la VPP. Les tracès artéfactés présentaient des performances moindre mais acceptable pour le artéfacts de type I et II. Une franche dégradation des peformances de l'algorithme étaient observées pour les artéfacts de type III avec pour la Se 85.2% (59.2–92.7) et la VPP 76.9% (47.0–90.5). Des résultats similaires ont été retrouvés concernant la détrection d'hypeventilation avec de moins bonnes perfomances lorsque le seuil d'hyperventilation augmentait. Les artéfacts de type III étaient également associé à une franche dégradation des performances.
+La surveillance de la fréquence ventilatoire est une des recommandations utilisant le capnogramme pendant une RCP. Cependant, la présence d'oscillations haute fréquence dans le capnogramme lors de compressions thoraciques peut compromettre l'interprétation du signal de capnographie. En présence d'artéfacts de type III, l'algorithme est pris à défaut avec une surestimation importante de la fréquence ventilatoire. Compte tenu que les artéfacts sont associés aux compressions thoraciques avec un aspect sinusauidale associé à un fréquence spectrale identifiable, un pré-traitement par filtrage semble envisageable. Ce filtrage avec pour objectif la préservation de la forme d'onde du capnogramme, optimiserait très probablement les performances de l'algorithme.
+
+
+### Enhancing ventilation detection during cardiopulmonary resuscitation by filtering chest compression artifact from the capnography waveform [@gutierrez2018enhancing]
 
 
 
 
-
-
+------------------------------------------------------------------------------------------
 
 
 ## Discussion 
@@ -1161,7 +1179,7 @@ La forme d'onde capnographique montre des changements dans le bronchospasme qui 
 
 ------------------------------------------------------------------------------------------
 
-#	References
+
 
 
 
@@ -1251,7 +1269,6 @@ capnogram signal
 : Synthèse des études sur la Capnographie Standard
 
 
-
 \elandscape
 
 
@@ -1264,12 +1281,14 @@ capnogram signal
 # Tableau 2 : Synthèse des études sur la Capnographie Standard
 
 
---------------------------------------------------------
-          Ref.              Auteur          Année         Périodiques      Performances   Gold Strandard  Algorithme  Méth. Class.
+------------------------------------------------------------------------------------------------------------------------------------
+          Ref.              Auteur           Année         Périodiques      Performances   Gold Strandard  Algorithme  Méth. Class.
 ----------------------   -------------   -----------   -----------------  --------------  --------------  ----------  ------------
- [@you1994expiratory]       You & al.        1994
+ [@you1994expiratory]      You & al.        1994
+ 
+ [@you1994expiratory]      You & al.        1994
 
---------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
 
 : Synthèse des études sur la Capnographie Standard
 
@@ -1278,6 +1297,69 @@ capnogram signal
 \elandscape
 
 \newpage
+\blandscape
+
+--------------------------------------------------------------------------------------
+
+# Tableau 3 : Synthèse des études sur la Capnographie Standard
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Auteur     Année   Effectif    Gold standard                       Caractéristiques                         Ref.
+----------   -----   --------   ------------------  -------------------------------------------------------   -----------
+babik         2012       68	      Res. & Comp.		  Pente III				                                      [@babik2012effects]
+
+blanch        1994		   41	      Résistance		    Pente III				                                    [@blanch1994relationship]
+
+brown         2013	     20      Spiro. & TDM		    Pente III		       		                                [@brown2013forced]
+ 
+egleston      1997		   38	      Clinique		      Pente S1, S2 & SR			                             [@egleston1997capnography]
+   
+evered        2003	     12	     Spiro. & Res.		  Pente III & angle alpha			                            [@evered2003can]
+
+hisamuddin    2009    	 100	       DEP			      Pente II, III & angle alpha		                    [@hisamuddin2009correlations]
+ 
+howe          2011        30	       DEP			      Pente II, III & angle alpha		                          [@howe2011use]
+ 
+ioan          2014         8	    Res. & Comp.		  Pente II, III, angle alpha, D1,D2                    	[@ioan2014frequency]
+
+kean          2010        34	  Spiro. & clinique	  8 critères de You			                                 [@kean2010feature]
+
+kline         1998	     139	  Scinti & TDM pulm	  Surface sous la courbe			                          [@kline1998preliminary]
+  
+krauss        2005       262	     Spiro.			      Pente II, III, EtCO2, FR, Tps Insp & expi.   	        [@krauss2005capnogram]
+
+lopez         2011        21	    Clinique		      Pente II, III, EtCO2, Tps Insp & expi., PcCO2-EtCO2	     [@lopez2011capnography]
+
+lukic         2006        5	      Clinique		      18 critères	                                             [@lukic2006novel]
+
+mieloszyk     2014       139	    Clinique		      Pente III, EtCO2, Tps exp., Tps EtCO2	     	         [@mieloszyk2014automated]
+	
+mieloszyk     2015        56	    Cliniique		      EtCO2, pente S1, S2, S3 & SR	 		                   [@mieloszyk2015clustering]
+
+yaron         1996        48	       DEP			      Pente III				                                        [@yaron1996utility]
+
+you		        1994        40	      Sprio.			    S1, S2, S3, SR, AR, SD1, SD2, SD3	                      [@you1994expiratory]
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+: Synthèse des études sur la Capnographie Standard
+
+
+\elandscape
+
+\newpage
+
+
+
+--------------------------------------------------------------------------------------
+
+#	References
+
+
+
+
+
 
 
 
