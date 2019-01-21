@@ -91,6 +91,19 @@ Ce groupe de patients représente un sous-groupe important de patients asthmatiq
 et (4) présenter des recommandations pour les besoins et l'orientation futurs de la recherche. Ce qui suit est un résumé de la présentation et de la discussion de l'atelier.
 
 
++++
+[@tillie2004physiopathologie]
+
+L'asthme est une maladie multifactorielle résultant de la conjonction de facteurs congénitaux (terrain atopique, anomalies constitutionnelles du muscle lisse...) et d'éléments liés à l'environnement(allergènes, polluants, infections...). Malgré de nombreux travaux, la physiopathologie de l'asthme reste controversée : l'efficacité des médiateurs [beta-adrdnergiques sur le spasme bronchique a conduit à mettre en avant le dysfonctionnement du systéme nerveux autonome, mais d' autres facteurs interviennent, comme la réponse immunitaire locale aux allergènes, agents viraux et irritants tels que les polluants extérieurs. Tous ces mécanismes concourent, des degrés divers, au développement de la réaction inflammatoire bronchique, commune 5 l'asthme intrinsèque ou  extrinsbque (allergique) [1]. Les phénomènes d'obstruction bronchique, variables dans le temps, associent de façon intriquée bronchospasme, sur lequel agissent les [Beta-2-mimétiques, et inflammation bronchique intégrant oedème paridtal, hypersécrétion et, de fagon plus tardive, remodelage (remodeling) des voies aériennes. Cette inflammation est présente un stade précoce de la maladie, parfois de faqon latente.
+
+Aspects anatomopathologiques
+L'inflammation bronchique au cours de la maladie asthmatique a été démontrée à la fois par les études post mortem et par l'analyse de biopsies bronchiques et du LBA. Chez les patients décédés d'asthme, on note une hypertrophie du muscle lisse, un épaississement de la membrane basale, des bouchons de mucus obstruant les bronchioles terminales avec hyperplasie des cellules glandulaires et la présence de cellules inflammatoires infiltrant la muqueuse bronchique. Cet infiltrat est composé de polynucléaires éosinophiles, neutrophiles, de lymphocytes et de cellules mononuclées [3]. L'épaississement de la membrane basale, présenté à un stade précoce de la maladie, correspond à un dépôt de collagène de types I, III et V dans la région sous-épithéliale. Cette fibrose sous-épithéliale traduit l'activation des myofibroblastes présents en nombre accru dans la sous-muqueuse et est le reflet du remodeling [14].
+
++++
+
+
+
+
 ### Bronchite Chronique Obstructive - BPCO
 [@hogg2004pathophysiology]
 ++++
@@ -116,8 +129,45 @@ Les progrès vers des traitements spécifiques de la BPCO pourraient être accé
 
 
 
+[@hogg2004pathophysiology]
+
+La bronchite chronique
+L'inflammation associée à la bronchite chronique se situe dans l'épithélium des voies aériennes centrales (diamètre interne supérieur à 4 mm), où elle s'étend le long des canaux des glandes jusque dans les glandes productrices de mucus59,60. Ce processus inflammatoire est associé à une production accrue de mucus, clairance mucociliaire défectueuse et perturbation de la barrière épithéliale fournie par le système de défense inné de l'hôte.20–22 Des cellules inflammatoires de la réponse innée et de la réponse adaptative de l'hôte participent à ce processus.60–62 Reid63 a remarqué que les glandes muqueuses bronchiques étaient élargies dans la bronchite chronique (figure 3) et a utilisé le rapport de l’épaisseur de la paroi des bronches (appelée désormais indice de Reid) comme critère de diagnostic du diagnostic pathologique de la bronchite chronique. Thurlbeck et Angus64 ont rapporté que l'indice de Reid était normalement distribué sans rupture nette entre patients avec et sans bronchite, mais la plupart des études ont montré un chevauchement assez faible avec des valeurs plus élevées chez les patients atteints de bronchite chronique65,66. La bronchite chronique est également associée à un épaississement des facteurs de croissance tels que TGF_beta se sont révélés présents dans les voies aériennes centrales 67, mais la complexité de leur rôle dans ce remodelage dépasse le cadre de la présente analyse. .
+La reconnaissance de la perte de la stérilité bactérienne normale dans les voies respiratoires inférieures en présence d'une bronchite chronique68 a conduit à l'hypothèse d'une progression naturelle de l'hypersécrétion de mucus associée à la cigarette à une hypersécrétion purulente et une bronchite obstructive (69).
+Cependant, les études longitudinales entreprises par Peto et ses collègues 70 et le groupe de Copenhague71 ont montré que les symptômes de la bronchite chronique ne permettaient pas de prévoir le déclin rapide du VEMS qui conduisait à la MPOC (figure 1). Cependant, les infections aiguës des voies respiratoires inférieures chez les fumeurs actuels atteints de BPCO pourraient entraîner une chute plus rapide du VEMS (72).
+
+
+Petite obstruction des voies respiratoires
+Bien que les termes bronchite chronique et obstruction des voies respiratoires soient souvent utilisés de manière interchangeable, le principal site d’obstruction se trouve en réalité dans les plus petites voies aériennes conductrices (diamètre inférieur à 2 mm) .3–5 Ces voies respiratoires sont réparties entre la quatrième et la quatorzième génération. ramification des voies respiratoires, puisque les branches de l’arbre bronchique humain ne sont pas dichotomiques73. L’augmentation du nombre de voies respiratoires à ramification progressive augmente rapidement leur section totale et diminue leur résistance. Dans les poumons sains, environ 75% de la résistance totale des voies respiratoires inférieures se situe dans les voies respiratoires principales dont le diamètre interne est supérieur à 2 mm, contre 25% dans les bronches plus petites et les bronchioles3,5. le larynx ne représente que 50% de la résistance totale mesurée à la bouche; les voies respiratoires d’un diamètre interne inférieur à 2 mm ne représentent que 10 à 15% de la résistance totale des voies respiratoires. Pour cette raison, Mead74 a qualifié les voies respiratoires conductrices périphériques de zone silencieuse des poumons, dans laquelle la maladie pourrait s’accumuler pendant de nombreuses années avec très peu d’effet.
+De nombreuses études ont montré qu'il existait des anomalies structurelles dans les petites voies respiratoires des fumeurs atteints ou non de MPOC 75–90. Certains chercheurs ont suggéré que l'accumulation de mucus obstruait les petites voies respiratoires des patients atteints de BPCO, mais ce «bouchage du mucus» attribués à un artefact post mortem lié aux événements ayant entraîné la mort. Cependant, une étude récente entièrement basée sur du tissu pulmonaire réséqué chirurgicalement provenant de patients à tous les stades de la classification GOLD de la BPCO a montré une relation entre l'accumulation d'exsudats inflammatoires contenant du mucus dans la lumière des voies respiratoires et la gravité de la BPCO90.
+Bien qu'une partie de ce mucus puisse être produite par les glandes des bronches plus centrales et aspirée dans les voies respiratoires périphériques, la plupart semble être ajoutée aux exsudats inflammatoires qui se forment dans les lumières des petites voies respiratoires (figure 4).
+Les cellules qui migrent à travers l'épithélium de la lumière des voies respiratoires sont délivrées par les vaisseaux sous-épithéliaux, mais les follicules lymphoïdes associés à la BALT sont centrés sur les vaisseaux dans la couche adventitielle (figure 2). Toute augmentation de tissu entre le muscle lisse des voies respiratoires et la surface de la lumière empiétera sur le calibre de la lumière et augmentera la résistance. De plus, cet effet peut être amplifié par la contraction du muscle lisse pour expliquer l'hyperréactivité des voies respiratoires relevée dans la BPCO91. Matsuba et Thurlbeck (10) ont montré un dépôt préférentiel de tissu conjonctif dans le compartiment adventiciel de la paroi des voies respiratoires dans un emphysème avancé. Nos découvertes plus récentes90 ont confirmé cette observation et suggéré que cette fibrose péribronchiolaire pourrait contribuer à l'obstruction des voies respiratoires en restreignant l'élargissement du calibre des voies aériennes provoqué par l'inflation des poumons (figure 4D). Le processus inflammatoire dans le compartiment adventitiel des petites voies respiratoires pourrait également détruire le support que les petites voies respiratoires reçoivent des alvéoles attachées à leurs parois extérieures. Bien qu'une diminution du nombre et de la force de ces attachements ait été impliquée dans une petite obstruction des voies respiratoires92,93 et soit corrélée à la diminution du VEMS, 94 mesures directes de la résistance des voies aériennes périphériques indiquent que cette perte de soutien des alvéoles est une cause moins importante d'obstruction la pathologie dans le mur et la lumière des voies respiratoires. 3
+Des rapports antérieurs ont également montré que les lymphocytes B et les lymphocytes CD4 et CD8 sont présents dans les tissus des voies respiratoires des patients atteints de BPCO, et qu'une augmentation du nombre de lymphocytes CD8 (95 à 97) et de lymphocytes B (98) est associée à une diminution du VEMS. Cette augmentation du nombre de lymphocytes est également associée à une augmentation de la BALT qui est rare chez les non-fumeurs en bonne santé, plus fréquente chez les fumeurs de cigarettes, 99 et montre une nouvelle augmentation marquée chez les patients atteints de maladies graves (GOLD 3) et très graves (GOLD 4). ) BPCO.90 Cette augmentation des sous-types de lymphocytes et l’apparition de la BALT à ce stade de la MPOC suggèrent l’apparition d’une réponse immunitaire adaptative pouvant être induite par la colonisation et l’infection microbiennes.30
+
+
+
+
 
 ++++
+
+[bpco_arce]
+La bronchopneumopathie chronique obstructive (BPCO) est une pathologie caractérisée par une atteinte des petites voies aériennes et une destruction du parenchyme pulmonaire (emphysème).
+C’est une des causes principales de morbidité et mortalité dans le monde et représente un poids social et économique grandissant. La prévalence de la BPCO augmente avec l’âge et le tabagisme et est plus fréquente chez les hommes. En Suisse, 8% des personnes > 70 ans ont une obstruction aux fonctions pulmonaires (15% des hommes et 3% des femmes).2 La BPCO est sous-diagnostiquée. Elle se situe à la 6ème place des causes de mortalité et est responsable de 3% des coûts liés aux dépenses de la santé. Les manifestations extra-pulmonaires de la BPCO incluent les maladies cardiovasculaires, la sarcopénie, l’ostéoporose, le diabète et les troubles anxio- dépressifs.
+La BPCO est d’origine multifactorielle. Gènes, âge, sexe, développement et maturation pulmonaire, exposition aux particules, en particulier au tabac, statut socioéconomique, asthme/hyperactivité bronchique, bronchite chronique et infections sont autant d’éléments impliqués dans la survenue de la BPCO.1
+2. DEFINITION/CLASSIFICATION
+La BPCO se définit par une obstruction irréversible des voies aériennes, le plus souvent progressive. La BPCO n’est pas synonyme de l’emphysème (entité pathologique ou radiologique, décrivant une destruction du parenchyme pulmonaire), ni de la bronchite chronique (entité clinique définie par une anamnèse de toux et d’expectorations durant au moins 3 mois et deux années consécutives)
+Les stades de la BPCO sont décrits sous la rubrique « diagnostic ».
+
+
+
+[@wagner1977ventilation]
+Les modèles observés d'inégalité V / Q et de shunt représentaient toute l'hypoxémie au repos et pendant l'exercice.
+Il n'y avait donc pas de preuve d'une hypoxémie causée par une altération de la diffusion.
+En conséquence, le schéma d’inégalité V / Q ne peut pas nécessairement être déduit de la PO2 artérielle et de la PCO2.
+
+
+
+
 
 
 
@@ -133,7 +183,7 @@ La distribution de l’emphysème est également évaluée, avec une distinction
 ++++
 
 Syndromes de chevauchement
-Comme préalablement évoqué, il existe différentes formes mixtes associant d’autres entités pneumolo- giques et l’emphysème pulmonaire. Il est par ex. question de «combined pulmonary fibrosis and emphysema» (CPFE) en présence d’une association de fibrose pulmo- naire et d’emphysème pulmonaire. La forme mixte associant asthme et BPCO (avec ou sans emphysème pulmonaire) est appelée «asthma-COPD-overlap» (ACO).
+Comme préalablement évoqué, il existe différentes formes mixtes associant d’autres entités pneumologiques et l’emphysème pulmonaire. Il est par ex. question de «combined pulmonary fibrosis and emphysema» (CPFE) en présence d’une association de fibrose pulmonaire et d’emphysème pulmonaire. La forme mixte associant asthme et BPCO (avec ou sans emphysème pulmonaire) est appelée «asthma-COPD-overlap» (ACO).
 
 ++++
 
@@ -171,13 +221,7 @@ Ces observations importantes doivent être réconciliées avec le corpus de preu
 
 ++++
 
-[bpco_arce]
-La bronchopneumopathie chronique obstructive (BPCO) est une pathologie caractérisée par une atteinte des petites voies aériennes et une destruction du parenchyme pulmonaire (emphysème).
-C’est une des causes principales de morbidité et mortalité dans le monde et représente un poids social et économique grandissant. La prévalence de la BPCO augmente avec l’âge et le tabagisme et est plus fréquente chez les hommes. En Suisse, 8% des personnes > 70 ans ont une obstruction aux fonctions pulmonaires (15% des hommes et 3% des femmes).2 La BPCO est sous-diagnostiquée. Elle se situe à la 6ème place des causes de mortalité et est responsable de 3% des coûts liés aux dépenses de la santé. Les manifestations extra-pulmonaires de la BPCO incluent les maladies cardiovasculaires, la sarcopénie, l’ostéoporose, le diabète et les troubles anxio- dépressifs.
-La BPCO est d’origine multifactorielle. Gènes, âge, sexe, développement et maturation pulmonaire, exposition aux particules, en particulier au tabac, statut socioéconomique, asthme/hyperactivité bronchique, bronchite chronique et infections sont autant d’éléments impliqués dans la survenue de la BPCO.1
-2. DEFINITION/CLASSIFICATION
-La BPCO se définit par une obstruction irréversible des voies aériennes, le plus souvent progressive. La BPCO n’est pas synonyme de l’emphysème (entité pathologique ou radiologique, décrivant une destruction du parenchyme pulmonaire), ni de la bronchite chronique (entité clinique définie par une anamnèse de toux et d’expectorations durant au moins 3 mois et deux années consécutives)
-Les stades de la BPCO sont décrits sous la rubrique « diagnostic ».
+
 
 
 
