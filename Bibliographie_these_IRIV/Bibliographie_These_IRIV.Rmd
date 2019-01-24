@@ -101,6 +101,29 @@ L'inflammation bronchique au cours de la maladie asthmatique a été démontrée
 
 +++
 
++++++++
+[@west1988physiopathologie]
+La bronchocontstriction dans l'asthme est du à une baisse de l'AMPcyclique intracellulaire par relargage de médiateur (Histamine, fracteur chimiotactique des ésoinophiles et neutrophile, prostaglandine, bradykinine, PAF, Triptase, TNF, dérivées de l'acide arachidonique, cytokines).
+Augmente la perméablité capillaire créant un oedème péribronchique.
+Augmentation de la CPT et de la CRF, une certaine perte de la rétraction élastique entrainant un déplacement de la courbe pression-volume en haut et à gauche (comme dans l'emphysème).
+Il est vraisemblable que le bronchospasme touche les voies aériennes de tout calibre et la relation entre la conductance des voies aéreinnes et la pression de rétraction élastique est fortement perturbée.
+Le rétrécissement des voies aériennes principales larges est moyennes peut-être observé en bronchoscopie.
+L'hypoxémie artérielle est fréquente dans l'asthme. Elle est provoquée par une inégalité du rapport ventilation-perfusion (V/Q) avec des régions hypoventilées occasionnant un effet shunt. Des inégalités marquées de distribution du débit sanguin sont également observées. L'espace mort physiologique et le shunt physiologique sont généralement tous les deux anormalement élevés.
+
++++++++
+
+[@plantier2016mechanisms]
+
+
+
+
++++++++
+
+
+
+
+
+
 
 
 
@@ -1287,6 +1310,9 @@ capnogram signal
 [@kelsey1962expiratory] 
 
 
+Site GLI _(Global Lung Function Initiative)_ :
+
+              http://gligastransfer.org.au/calcs/tlco.html
 
 
 \pagebreak
