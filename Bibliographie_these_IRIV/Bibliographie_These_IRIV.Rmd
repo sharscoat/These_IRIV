@@ -6,12 +6,15 @@ date: "5 février 2018"
 fontsize: 12pt
 header-includes:
   - \usepackage[french]{babel}
+  - \usepackage[utf8]{inputenc}
   - \setlength\parindent{24pt}\setlength{\parskip}{0.0pt plus 1.0pt}
   - \usepackage{graphicx}
   - \usepackage{float}
   - \usepackage{pdflscape}
   - \newcommand{\blandscape}{\begin{landscape}}
   - \newcommand{\elandscape}{\end{landscape}}
+  - \usepackage{amsmath,amsfonts,amssymb}
+  - \usepackage[french]{babel}
 output:
   pdf_document:
     highlight: kate
@@ -78,7 +81,10 @@ Dans ce but, nous établiront dans un premier temps l’état des connaissances 
 
 ## Rappel d'Anatomie et de Physiologie Respiratoire
 
+[@hogg2013small]
+La frontière entre les voies respiratoires purement conductrices et les tissus échangeurs de gaz est formée par la division d'environ 44 510 +/- 15 574 bronchioles terminales (SD moyenne) en bronchioles de transition ou en bronchioles respiratoires du premier ordre où apparaissent d'abord les ouvertures alvéolaires (Fig 1) .8, 9 Les ouvertures alvéolaires augmentent progressivement avec les générations successives de ramifications jusqu'à occuper toute la surface de la lumière des conduits alvéolaires et les conduits ramifiés pendant plusieurs générations avant de se terminer dans des sacs alvéolaires fermés.8 Le terme «acinus» désigne une unité de poumon fournie par une bronchiole terminale unique; le terme lobule secondaire fait référence à des groupes d'acini identifiés soit par un septa du tissu conjonctif environnant (Fig. 1B), soit par un déplacement du motif de ramification bronchiolaire (Fig 1C) par rapport à un groupe dont les bronchioles prélobulaires se ramifient environ tous les centimètres en bronchioles intralobulaires groupe seulement millimètres les uns des autres.8,10 La variation de la longueur du trajet de la trachée à la surface d'échange de gaz distribue les voies respiratoires de 2 mm de la quatrième à la 14e génération de ramification des voies aériennes et les bronchioles intralobulaires entre la huitième et la 22e génération de branchement des voies respiratoires.11,12 La carte codée par couleur (Fig. 2B) montre que des générations uniques de ramifications contiennent des voies aériennes de différentes tailles en reproduisant les données de Weibel concernant l'emplacement des voies aériennes de différentes tailles.
 
+les premières mesures directes ont montré que les voies aériennes de < 2 mm de diamètre représentaient < 20% de la résistance totale des voies respiratoires inférieures dans les poumons des animaux anesthésiés et post mortem.
 
 
 
@@ -188,6 +194,35 @@ Les modèles observés d'inégalité V / Q et de shunt représentaient toute l'h
 Il n'y avait donc pas de preuve d'une hypoxémie causée par une altération de la diffusion.
 En conséquence, le schéma d’inégalité V / Q ne peut pas nécessairement être déduit de la PO2 artérielle et de la PCO2.
 
+
+[@mcdonough2011small]
+
+[@hogg2013small]
+L'augmentation de la superficie totale de la section transversale dans les voies respiratoires distales du poumon humain améliore le mélange de chaque respiration de marée avec le volume de gaz expiratoire en ralentissant le débit massique et en augmentant la diffusion de gaz. Cependant, cette transition favorise également le dépôt de particules en suspension dans l'air dans cette région, car elles diffusent 600 fois plus lentement que les gaz. En outre, le dépôt persistant de particules toxiques en suspension dans l’air stimule une infiltration inflammatoire chronique des cellules immunitaires ainsi que des processus de réparation et de remodelage des tissus, ce qui augmente la résistance dans les voies respiratoires < 2 mm de diamètre 4 à 40 fois plus dans la BPCO. Cette augmentation a été initialement attribuée à un rétrécissement de la lumière car elle augmente la résistance proportionnellement à la modification du rayon de la lumière portée à la quatrième puissance. En revanche, l'élimination de la moitié du nombre de tubes disposés en parallèle est nécessaire pour doubler leur résistance, et environ 90% doivent être supprimés pour expliquer l'augmentation de la résistance mesurée dans la BPCO. Un réexamen récent de ce problème basé sur la micro-tomodensitométrie indique que les bronchioles terminales sont à la fois rétrécies et réduites à 10% des valeurs de contrôle dans l'emphysème centrolobulaire et à 25% dans le phénotype panlobulaire des BPCO très sévère de grade IV de la classificaiton de GOLD. Ces nouvelles données indiquent que le rétrécissement et la réduction du nombre de bronchioles terminales contribuent au déclin rapide du VEMS, ce qui entraîne une obstruction grave des voies respiratoires dans la BPCO. De plus, l'observation que la perte bronchiolaire terminale précède l'apparition de la destruction emphysémateuse suggère que cette destruction commence aux tout premiers stades de la BPCO.
+
+
+Un effet de l'augmentation rapide de la surface totale de la section transversale à mesure que la génération de ramifications augmente (Figs 3A, 3B) ralentit la vitesse de l'écoulement globale et améliore la diffusion du gaz vers la surface alvéolaire. Bien que cette transition facilite le mélange entre l'air inspiré et le volume de gaz en fin d'expiration, elle expose également la région de transition du poumon à un excès de dépôt de particules en suspension dans l'air car elles diffusent beaucoup plus lentement que le gaz. Par exemple, les particules en suspension dans l'air de 0,5 mm de diamètre qui ont la plus grande probabilité d'atteindre la zone de transition du poumon sont environ 1 000 fois plus grandes et ont une constante de diffusion environ 1 million de fois plus petite que les molécules de gaz. De plus, étant donné que leur déplacement quadratique moyen par seconde par diffusion est environ 600 fois plus petit que l’oxygène (c’est-à-dire 10 mm / s contre 6 000 mm / s), les particules peuvent se déposer à la surface de la zone de transition de poumon entre les respirations. En outre, étant donné que la surface des bronchioles prématernelle, terminale et transitoire est relativement petite comparée à la surface des espaces aériens plus distaux, ces voies respiratoires reçoivent la plus grande dose de particules inhalées par unité de surface. 
+
+
+```{r , echo=FALSE, out.width = "500px", fig.pos='h!',fig.align = 'center', fig.cap = "B : Bronchogramme d'un poumon humain post mortem où un groupe de bronchioles terminales est entouré par un septa de tissu conjonctif fibreux pour former un lobule pulmonaire secondaire. C et A : lobule tel que défini par Reid10, où le motif de ramification passe de celui où les branches sont espacées de quelques centimètres à celui où les branches du carré ne sont séparées que de quelques millimètres.."}
+knitr::include_graphics("figure/hogg2013small_fig01.1.png")
+```
+
+Figure 1 : 
+B : Bronchogramme d'un poumon humain post mortem où un groupe de bronchioles terminales est entouré par un septa de tissu conjonctif fibreux pour former un lobule pulmonaire secondaire.
+C et A : lobule tel que défini par Reid10, où le motif de ramification passe de celui où les branches sont espacées de quelques centimètres à celui où les branches du carré ne sont séparées que de quelques millimètres.
+
+
+```{r , echo=FALSE, out.width = "500px", fig.pos='h!',fig.align = 'center', fig.cap = "Cross-section"}
+knitr::include_graphics("figure/hogg2013small_fig02.jpg")
+```
+
+
+```{r , echo=FALSE, out.width = "500px", fig.pos='h!',fig.align = 'center', fig.cap = "Cross-section"}
+knitr::include_graphics("figure/hogg2013small_fig03.jpg")
+```
+
+[@reid1958secondary]
 
 
 
@@ -356,8 +391,13 @@ La ventilation et la perfusion pulmonaire ne sont pas homogènes mais varient pr
 L’augmentation de la ventilation vers les bases est cependant moins importante que l’augmentation de la perfusion, si bien que le rapport entre la ventilation est la perfusion augmente de la base vers le sommet.
 
 Lois de diffusion 
-La diffusion d'un gaz à travers un tissu est régie par la loi de Fick: la diffusion est proportionnelle à la surface du tissu (S: 50 à 100 m2 pour la barrière alvéolo-capillaire) et inversement proportionnelle à l'épaisseur (E: 0,5 $\mu m$ pour la barrière alvéolo-capillaire) de ce tissu; elle est aussi proportionnelle au gradient de concentration ( ou de pression: P1 - P2) de part et d'autre du tissu; elle est enfin proportionnelle à une constante de diffusion (D) qui tient compte des caractéristiques du gaz (cette constante est proportionnelle à la solubilité du gaz (Sol) et inversement proportionnelle à la racine carrée de son poids moléculaire (PM). Cette constante de diffusion est 20 fois plus élevée pour CO2 que pour O2.
+La diffusion d'un gaz à travers un tissu est régie par la _loi de Fick_: la diffusion est proportionnelle à la surface du tissu (S: 50 à 100 m2 pour la barrière alvéolo-capillaire) et inversement proportionnelle à l'épaisseur (E: 0,5 $\mu m$ pour la barrière alvéolo-capillaire) de ce tissu; elle est aussi proportionnelle au gradient de concentration ( ou de pression: P1 - P2) de part et d'autre du tissu; elle est enfin proportionnelle à une constante de diffusion (D) qui tient compte des caractéristiques du gaz (cette constante est proportionnelle à la solubilité du gaz (Sol) et inversement proportionnelle à la racine carrée de son poids moléculaire (PM). Cette constante de diffusion est 20 fois plus élevée pour CO2 que pour O2.
 $$ \dot{V}_{gaz} \sim \frac{S}{E}.D.(P_{1}-P_{2})$$
+\begin{equation}
+  \dot{V}_{gaz} \sim \frac{S}{E}.D.(P_{1}-P_{2})
+\label{eq:Loi de Fick}
+\end{equation}
+
 où 
 $$ D \sim \frac{Sol}{\sqrt{PM}}$$
 
@@ -627,9 +667,58 @@ En 1996, Yaron et al. (27) ont conduit une étude prospective au service des urg
 
 ### Expiratory capnography in asthma - evaluation of various shape indices   [@you1994expiratory]
 Une des premières études fondamentales dans l'analyse de la capnographie a été conduite par You et al (30). Ils ont examiné de nouveaux paramètres en fonction des pentes et des ratios de surface pour mieux caractériser la nature de la transition de la phase II à la phase III en capnographie standard. Les corrélations entre indices capnographiques et mesures spirométriques ont été calculées chez 10 sujets sains et 30 patients asthmatiques de sévérités différentes. Huit indices descriptifs ont été évaluée en mesurant leur reproductibilité et leur sensibilité sur l'évaluation de l'obstruction des voies aériennes. Trois indices mesurais la pente de la courbe lors de la phase d'expiration (S1, S2 et S3). Un index composite SR correspondant au ratio entre les pente de la partie 1 et 2 de l'ascention du CO2 (S2/S1)x100 a été évalué. Un ratio de surface AR correspondant au rapport des surface A1 et A2, surface au-dessus d'un seuil de 2.5 % de CO2 entre 0.2 et 1 seconde (AR : (A1/A2) x100), a été calculé. Trois derniers indices ont été utilisé correspondant à la deuxième dérivée de la courbe de capnographie au niveau des segment S1, S2 et S3 (SD1, SD2 et SD3).
+Dans cette étude, une mesure de la reproductibilité des 8 indices a été réalisé sur 14 patients (7 femmes et 7 hommes). Les 8 indices ont été mesurés et comparés après 2 enregistrements successifs à 10 minutes d'intervalle pour chaque patient. Les variabilités "intra-individu" ($Vi$) et "inter-individu" ($VI$) ont été calculées comme suit :
+
+$$Vi=\frac{2(m1-m2)}{m1+m2}$$
+
+\begin{equation}
+  Vi=\frac{2(m1-m2)}{m1+m2}
+\label{eq:Vi}
+\end{equation}
+
+et 
+
+$$VI=\frac{\frac{\sigma1}{m1}+\frac{\sigma2}{m2}}{2}$$
+
+\begin{equation}
+  VI=\frac{\frac{\sigma1}{m1}+\frac{\sigma2}{m2}}{2}
+\label{eq:VI}
+\end{equation}
+
+Le rapport signal sur bruit de chaque indice a ensuite été caractérisé en réalisant le rapport de la moyenne Vi sur la moyenne de VI sur l'ensemble des patients, où $\sigma1$ et $\sigma2$ sont les écarts-types des premières et secondes mesures du groupe.
+
 Les résultats ont montré qu'une grande différence de corrélation parmi l'ensembles des indices. Selon leur recherche, une haute sensibilité à l'obstruction de voie aérienne a été vue pour des pentes intermédiaires et terminales (S2 et S3) ainsi que pour le radio des pentes (SR), suivie par les indices associés à la dérivées secondes de la courbes (SD1, SD2, SD3). 
 La corrélation la plus forte a été retrouvée entre le VEMS%-pred et le pic de dérivée seconde SD2 associé à une corrélation r = 0.93 (p < 0.01). Les corrélations les plus faibles ont été retrouvé pour les indices S1 et AR. Cette recherche a permis de mettre en évidence des paramètres simples et utilisables, ainsi qu'une corrélation forte entre indice de capnogrpahie et données spirométriques. Mais ces paramètres restent du domaine temporel sans anlayse dans le domaine fréquentiel. Il est à noter également que les mesures ont été réalisées manuellement associé à un facteur d'erreur non négligeable, aussi consommateur de temps avec une reproductibilité médiocre. Ce travail reste néanmoins malgré quelques points discutables, une référence dans l'analyse de la capnographie.
 
+
+++++++++++++++++++++++++
+De grandes différences ont été observées entre les indices (tableau 1). Les variabilités intra-individuelles étaient faibles (Vi <10%), les indices décrivant la partie initiale du capnogramme (S1, AR, SD1, SD2). Les résultats étaient médiocres pour les indices intermédiaires (SD3, SR et S2) et les moins bons pour S3. Une variabilité importante entre les sujets, suggérant une sensibilité élevée à l'obstruction des voies respiratoires, a été observée pour les pentes intermédiaires et terminales (S2, S3, SR), suivie de SD1, SD2, SD3 et les plages les plus basses ont été observées avec S1 et SR. .
+Pour Vi / VI qui est un indice du rapport bruit / signal, les meilleurs résultats, c'est-à-dire les valeurs les plus basses, ont été obtenus avec SR, AR et SD2; de bons résultats ont été trouvés avec S1, S2 et SD1; et des résultats médiocres avec SD3 et S3.
+
+Comparaison des sujets contrôles et asthmatiques. Les deux populations de sujets ont pu être clairement distinguées sur la base des résultats spirométriques (tableau 2). Alors que les sujets témoins avaient des valeurs étroitement groupées autour de la moyenne (écart-type/moyenne, $\sigma$/m = 7,4–16%), les sujets asthmatiques présentaient des différences interindividuelles marquées, reflétant une grande diversité dans la sévérité du bronchospasme ($\sigma$/m = 42,5 à 61,2%). Dix patients asthmatiques présentaient des valeurs spirométriques normales ou sous-normales, avec un VEMS prédictif compris entre 80 et 100%, dix autres modérés (VEMS = 40–79% prédétés) et 10 signes d’obstruction marqués (VEMS = 16–39% prédictifs). L'analyse de la variance a montré que tous les indices capnographiques étaient significativement différents (p <0,001 dans tous les cas) entre les groupes contrôle et asthmatique. Malgré la taille réduite des sous-groupes, la plupart des indices étaient également différents entre les trois sous-groupes, notamment entre A2 et A3.
+
+Corrélations entre capnographie et spirométrie. En général, les indices capnographiques étaient fortement corrélés aux paramètres spirométriques (p <0,001 dans tous les cas) (tableau 1 et figure 2). Dans certains cas, des corrélations légèrement meilleures ont été trouvées en utilisant un ajustement semi-log. Les corrélations les plus élevées ont généralement été observées avec FEV1% pred plutôt qu'avec PEF% pred. Ceux avec FEV25–75% pred étaient systématiquement inférieurs à ceux des autres indices spirométriques. Les indices intermédiaires et terminaux étaient souvent plus corrélés aux flux maximaux que les indices initiaux (S1, AR, SD1). Les meilleurs résultats ont été obtenus avec les indices moyennant un partie de la dérivée seconde, notamment SD2. Pour les pentes, aucune amélioration n’a été constatée entre S2 et S1.
+
+DISCUSSION:
+KELSEY et OLDHAM [18] ont décrit quatre types de formes dans les capnogrammes normaux et obstructifs. Depuis leur rapport, diverses approches théoriques ont été utilisées pour quantifier ces déformations [2, 7–9, 19, 20] et plusieurs indices capnographiques ont été évalués dans le traitement de la bronchopneumopathie chronique obstructive (COLD): 1) la pente du plateau alvéolaire qui peut être liée à la PETCO2 [1, 10, 11]; 2) le rayon de courbure minimale de l'angle Q [7–9, 12, 21]; 3) le temps nécessaire pour passer de 25 à 75% de la PETCO2 [4, 13]; et 4) l'angle entre "E2" et "E3" mesuré manuellement ou calculé à partir du rapport de leurs pentes [14, 22, 23]. Dans toutes les études de validation [10–12, 14], des corrélations significatives ont été trouvées entre les mesures spirométriques habituelles et les valeurs des indices capnographiques utilisés.
+Quatre études ont porté sur le capnogramme chez les asthmatiques. Les trois premiers [23–25] ont été menés chez des enfants et ont montré des modifications des pentes E2 et E3 après une provocation bronchique. La quatrième [16], réalisée par nos soins, a été réalisée chez des asthmatiques adultes. La valeur de la pente de fin de marée (ETS), mesurée manuellement, a été comparée au VEMS% préd. Une bonne corrélation a été observée entre ces deux paramètres, mais cette étude préliminaire a suggéré une informatisation de l'analyse par capnogramme, puis l'évaluation de nouveaux indices ne présentant pas les inconvénients rencontrés avec l'utilisation de l'ETS (voir ci-dessous).
+
+Sélection de cycles
+D'un point de vue méthodologique, les irrégularités physiologiques de la respiration nécessitent la sélection de cycles de bonne qualité en fonction de critères de durée, d'amplitude et, si possible, de régularité de la courbe. Dans cette étude, nous avons systématiquement éliminé les cycles qui ne répondaient pas aux critères suivants: 1) expiration durant entre 0,8 et 3 s; 2) amplitude maximale supérieure à 3,5%; et 3) bonne régularité de E2 et E3.
+De plus, dans ces limites, certains indices exigent, selon leurs définitions, qu’un cycle réponde à des exigences spécifiques de durée et de forme. Ces exigences particulières sont responsables d'un taux de rejet automatique, spécifique à chaque indice, et augmentant avec la sévérité du bronchospasme (cycles courts empêchant la mesure des derniers indices).
+
+Facteurs influençant les données
+Certains indices peuvent être altérés par des facteurs induisant une déformation du capnogramme non liée à une obstruction bronchique. La forme du capnogramme peut dépendre en premier lieu de facteurs méthodologiques, à savoir les caractéristiques dynamiques de l'analyseur. À cet égard, il convient de distinguer _le temps de réponse du délai pur introduit par le cathéter de prélèvement. Ce dernier ne modifie pas la forme du signal, mais un temps de réponse long filtre ses composants rapides. Dans cette étude, le temps de réponse à 90% de l'instrument était de 250 ms, avec un débit d'échantillonnage de 150 ml.min-1. En supposant un comportement de premier ordre, cela correspond à une constante de temps d'environ 100 ms. Nous avons essayé de corriger numériquement les données de cette réponse instrumentale et avons étudié l’influence de doubler le temps de réponse: il en résultait une diminution de tous les indices qui restaient toutefois corrélés aux paramètres spirométriques (p <0,01 pour tous indices, sauf p <0,05 pour S1 et p <0,02 pour SR). Nous concluons qu'un un temps de réponse plus long modifie les indices capnographiques, mais n'efface pas leur valeur diagnostique_.
+En capnographie en fonction du temps, le débit expiratoire détermine également la forme générale du capnogramme, car le PECO2 est davantage lié au volume expiré qu'au temps expiratoire. Une élévation émotionnelle du débit expiratoire peut être responsable de la sous-estimation du bronchospasme. En revanche, pendant le sommeil, des diminutions du débit de ventilation (phases de mouvement oculaire rapide) liées au stade peuvent induire des déformations pseudo-obstructives du capnogramme. C'est le prix à payer lorsqu'un spirogramme n'est pas enregistré simultanément. De la même façon, la tension artérielle en dioxyde de carbone (PaCO2) détermine l'amplitude globale du capnogramme et influence légèrement les indices.
+La durée de la phase expiratoire influence profondément les derniers indices en raccourcissant ou en allongeant la partie terminale du capnogramme dont la pente diminue. Dans certaines conditions (expiration <1,5 s ou> 2,5 s), un indice tardif (S3) peut donc considérablement ou sous-estimer le bronchospasme. Cela peut expliquer la grande variabilité intellectuelle de ces indices.
+Enfin, le plateau alvéolaire peut être altéré par des artefacts dérivés des voies respiratoires supérieures (obstruction nasale, ondes pulstiles d'origine carotidienne) qui empêchent l'analyse de 5% des enregistrements. Ces différents pièges nécessitent des critères d'utilisation et d'interprétation adéquates de la capnographie par aspirations; les plus importants, en utilisation clinique, sont les conditions de repos strictes (ce qui exclut les épreuves d'effort).
+
+Variabilité et relation aux indices spirométriques
+L'évaluation des indices capnographiques doit prendre en compte d'une part leur rapport bruit / signal (Vi / VI), d'autre part leur corrélation avec les indices spirométriques. En termes de Vi / VI, les indices initiaux ont le bruit le plus faible (Vi <10%) et montrent des signes de robustesse, tandis que les derniers indices (S3 et SD3) ont un rapport bruit / signal élevé (Vi / VI> 50%) qui interdit leur utilisation clinique. Inversement, les indices intermédiaires et terminaux indiquent les meilleures corrélations avec les paramètres spirométriques. Par conséquent, au cours de l’expérience, le capnogramme semble être de plus en plus sensible à l’obstruction bronchique mais de moins en moins reproductible.
+Les bons résultats de l’étude de corrélation sont confirmés par des mesures effectuées lors d’un challenge bronchique. Dans la littérature, deux études conduites chez l’enfant ont montré des modifications de différents indices capnographiques lors de défis bronchiques par inhalation [23, 24]. Dans l'un de nos travaux précédents [16], une corrélation élevée (p <0,001) a été constatée entre les variations d'un indice capnographique (ETS) et d'un des VEMS produits par le salbutamol. Dans une autre étude (non publiée) menée auprès de six enfants asthmatiques (âge moyen ± DS ± 5,0 ± 2,2 ans), les valeurs de SD2 ont été comparées à celles de l'impédance respiratoire obtenue par oscillations forcées. Les mesures effectuées lors d'un test à l'acétylcholine puis après le salbutamol ont montré une bonne corrélation (p <0,01) entre les variations des deux indices. Ces résultats nous ont incités à utiliser le suivi en ligne des indices capnographiques, dont les courbes de tendance donnent une vision dynamique, liée au temps, de la réponse bronchique à tout médicament [26].
+
+La surveillance de l'asthme ne fait pas encore partie de la pratique clinique; plusieurs méthodes fonctionnelles ont été utilisées [27–35] en raison de l'absence d'une méthode universellement reconnue, sensible, fiable et non invasive. L'absence de contraintes (non-invasive et coopération-indépendance), associée à une sensibilité satisfaisante (corrélation élevée avec les paramètres spirométriques), permet de proposer une capnographie pour cette application. La mesure informatisée des indices, leur mémorisation et leur visualisation sous forme de courbes de tendance pourraient constituer un outil utile pour la surveillance de l'asthme. La capnographie peut être utilisée chez des sujets éveillés et endormis et pourrait permettre d’envisager de nouvelles applications: surveillance de l’état asthmatique, détection des crises nocturnes, évaluation de la durée d’action des bronchodilatateurs, surveillance intra- et postopératoire des asthmatiques. patients, et des tests dynamiques de provocation bronchique, en particulier chez les enfants.
+++++++++++++++++++++++++
 
 
 ### Capnography for monitoring non-intubated spontaneously breathing patients in an emergency room setting [@egleston1997capnography]
@@ -702,6 +791,23 @@ Transformée en ondelettes :
 Ensuite, pour chaque type de segment, le nombre d'échantillons a été normalisé à une moyenne calculée sans tenir compte du nombre minimal ou maximal d'échantillons pour ce segment dans le signal. La transformation en ondelettes a ensuite été appliquée aux segments. De cette manière, le même nombre de coefficients d'ondelettes a été obtenu par type de segment. Après la procédure précédente, les valeurs moyennes des coefficients d’approximation et de détail du troisième niveau de décomposition - CA3, CD3, CD2 et CD1 - ont été sélectionnées comme caractéristiques, CA3 étant les coefficients d’approximation du troisième niveau de décomposition et CD3, CD2 et CD1. détailler les coefficients de décomposition des niveaux 3, 2 et 1.
 L'expérience a également été menée à l'aide de la transformée en ondelettes de Haar. Le nombre de coefficients d'ondelettes a été considérablement réduit lorsque la décomposition en ondelettes a été appliquée (restreinte) aux segments d'intérêt. Pour 6803 échantillons de capnogramme, par exemple, les coefficients détaillés du premier niveau de décomposition ont été réduits entre 3402 à 2110, ce qui équivaut à une réduction de 40%. Le pourcentage de réduction était similaire pour les coefficients restants.
 
+
+$$X_{W}(a,b)=a^{-\frac{1}{2}}\int_{-\infty}^{+\infty} f(t)\varphi(\frac{t-b}{a}) \mathrm{d}t$$
+
+\begin{equation}
+    X_{W}(a,b)=a^{-\frac{1}{2}}\int_{-\infty}^{+\infty} f(t)\varphi(\frac{t-b}{a}) \mathrm{d}t
+\label{WDT}
+\end{equation}
+
+
+$$X_{W}(a,b)=a_{0}^{-\frac{m}{2}}\int_{-\infty}^{+\infty} f(t)\varphi(a_{0}^{-m}t-nb_{0}) \mathrm{d}t$$
+
+\begin{equation}
+    X_{W}(a,b)=a_{0}^{-\frac{m}{2}}\int_{-\infty}^{+\infty} f(t)\varphi(a_{0}^{-m}t-nb_{0}) \mathrm{d}t
+\label{WDT_pente}
+\end{equation}
+
+
 Methode de Classification :
 La méthode utilisée pour sélectionner les caractéristiques permettant la bonne classification des patients était un classifieur à vecteurs de support ou "Support Vector Machines" (SVMs) en anglais.
 Seize capnogrammes d'asthme de degré 0 et 7 d'asthme de degré 1 sont utilisés dans des expériences. Les coefficients d’ondelettes de Haar, c’est-à-dire CA3, CD3, CD2 et CD1, constituent le vecteur d’entrée du classificateur. La sortie est le degré de sévérité de l’asthme, qui a 2 classes, c’est-à-dire 0 correspondant à aucune crise et 1 correspondant à une oppression thoracique.
@@ -763,6 +869,32 @@ Résultats
 ### Frequency analysis of capnogram signals to differentiate asthmatic and non-asthmatic conditions using radial basis function neural networks [@kazemi2013frequency]
 
 
+Analyse Fréquentielle par Transformée de Fourier Discrète ou _Discrete Fourier Transform (DFT)_ en anglais.
+La transformée de Fourier discrète (DFT) d’une séquence de $N$ points $x(n)$ est définie sous la forme suivante :
+
+$$X(k)=-\sum_{n=0}^{N-1} x(n)\mathrm{e}^{-j2\pi nk/N}$$
+
+\begin{equation}
+    X(k)=-\sum_{n=0}^{N-1} x(n)\mathrm{e}^{-j2\pi nk/N}
+\label{DFT}
+\end{equation}
+
+
+Modéle Autogressif ou _Autoregressive models (AR)_ en anglais.
+Le modèle AR d'une série chronologique ou temporelle est représenté sous la forme suivante :
+
+$$x(n)=-\sum_{m=1}^{P} a(m)x(n-m)+e(n)$$
+
+\begin{equation}
+    x(n)=-\sum_{m=1}^{P} a(m)x(n-m)+e(n)
+\label{autoregresive model}
+\end{equation}
+
+où $x(n)$ est la série temporelle, $a(m)$ sont des paramètres de l'AR, $P$ est l'ordre du modèle et $e(n)$ est l'erreur de prédiction.
+
+
+
+
 
 
 ### New Prognostic Index to Detect the Severity of Asthma Automatically Using Signal Processing Techniques of Capnogram [@kazemi2016new]
@@ -771,14 +903,27 @@ Le DEP nécessite une expiration forcée avec participation du patient dans un c
 
 Codate Prédictif Linéaire ou _Linear Predictive Coding (LPC)_ en anglais.
 Pour une échantillon de signal $x(n)$ :
-$$x(n)=\sum_{k=1}^{p} \alpha_{k}.x(n-k)+e(n)$$
+$$x(n)=\sum_{k=1}^{p} \alpha_{k}x(n-k)$$
+
+\begin{equation}
+    x(n)=\sum_{k=1}^{p} \alpha_{k}x(n-k)
+\label{Linear Predictive Coding}
+\end{equation}
+
 où $\alpha_{k}$ et $p$ sont respectivement les coefficients et l'ordre du LPC, et $e(n)$ est l'erreur de prédiction.
 Dans cette étude une analyse de la meilleur valeur de $p$ (d'odre) a été réalisé montrant que l'ordre 8 montre la meilleur corrélation entre signal original et signal estimé. Cela s'explique par le fait que la fréquence respiratoire est comprise entre 12 et 50 cycles par minutes correspondant à une fréquence basse. Les coefficients $\alpha_{k}$ pour $k=1$ et $k=4$ montre les meilleurs sensibilité/spéficificité ainsi qu'AUC avec respectivement 93.5/94.7 (0.70) et 96.8/95.6 (0.72). Ces deux coefficients montrent la meilleur distinction entre les deux groupes.
 
 
 Modéle Autogressif ou _Autoregressive models (AR)_ en anglais.
 Le modèle AR d'une série chronologique ou temporelle est représenté sous la forme suivante :
-$$x(n)=-\sum_{m=1}^{P} a(m).x(n-m)+e(n)$$
+
+$$x(n)=-\sum_{m=1}^{P} a(m)x(n-m)+e(n)$$
+
+\begin{equation}
+    x(n)=-\sum_{m=1}^{P} a(m)x(n-m)+e(n)
+\label{autoregresive model}
+\end{equation}
+
 où $x(n)$ est la série temporelle, $a(m)$ sont des paramètres de l'AR, $P$ est l'ordre du modèle et $e(n)$ est l'erreur de prédiction.
 
 Reseau de Neurone Artificiel
@@ -858,8 +1003,14 @@ Concernant le sous système de mélange :
 Lors de l'inspiration, l'espace mort, qui est la région du poumons ne participant pas aux échanges gazeux, est rincée avec de l'air atmosphérique contenant une fraction de CO2 négligeable. L'air dans la région alvéolaire, cependant, a des quantités substantielles de CO2 (à pression partielle $p_{A}$) en raison des échanges gazeux avec les capillaires pulmonaires. Lors de l'expiration, l'air riche en CO2 des alvéoles se mélange à l'air pauvre en CO2 de l'espace mort. Nous modélisons ce processus comme un mélange instantané d'air: une quantité infinitésimale d'air pénètre dans l'espace mort et se mélange instantanément pour créer un mélange homogène d'air dans l'espace mort, de concentration $p(t)$ au temps $t$. Une quantité infinitésimale de ceci est expulsée par la bouche et le nez pour maintenir le volume de l'espace mort, $V_{D}$, fixé. Ce modèle est basé sur le principe qu'un mélange important se produit dans l'espace mort par la turbulence et la ramification des voies aériennes dans les voies respiratoires supérieures. En se basant sur ces hypothèses et en considérant $p_{D}(t)$ au temps zéro, égale à zéro soit $p_{D}(0)=0$, les auteurs retouve une équation du modèle mécanistique du type :
 $$
 p_{D}(t)=p_{A} - p_{A} \mathrm{e}^{\alpha} \mathrm{e}^{\alpha\mathrm{e}^{-\frac{t}{\tau}}} 
-\tag{1}
+\tag{**}
 $$
+
+\begin{equation}
+  p_{D}(t)=p_{A} - p_{A} \mathrm{e}^{\alpha} \mathrm{e}^{\alpha\mathrm{e}^{-\frac{t}{\tau}}}
+\label{eq:modèle mécanique 1}
+\end{equation}
+
 avec $\alpha= \frac{-C_{l}\Delta P}{V_{D}}$ et $\tau=R_{l}C_{l}$.
 
   - $C_{l}$ : la compliance pulmonaire
@@ -922,12 +1073,51 @@ Les changements de paramètres variaient d’un patient à l’autre, peut-être
 Ces directions de modifications vont dans le sens des données de la littérature avec une augmentation de résistance des poumons lorsque $\tau$ augmente correspondant à une diminution du calibre des voies aériennes, et une augmentaiton du rapport entre espace mort physiologique et volume courant entrainant une diminution de $\alpha$.
 
 
+#### Justification du modèle
+
+Airflow Process :
+De nombreux modèles mécanistiques ont été proposés dans la littérature pour décrire le flux d’air expiratoire (sortant des poumons) en fonction de la pression motrice[13]. Un modèle a été utilisé. Il correspond à considérer le poumon comme un partiment unique correspondant à une alvéole, de volume variable associé à un volume d'espace mort anatomique de volume constant.Le compartiment alvéolaire étant élastique emmagansinant de l'énergie potentiel lors de l'inspiration, est caractérisé par sa compliance $C_{l}$. Ce dernier est connecté au compartiement de l'espace mort anatomique qui correspond au voies de conductions (bronches et trachées) et l'oropharynx. Il se caractérise pas sa résistance à l'air $R_{l}$.
+L'expiration se fait de façon passive à l'état stable. Lors de l'inspiration, le compartiement alvéolaire est distendu entrainant une expension de volume grace au muscle respiratoire. Cela a pour effet d'emmagasiner de l'energie potentiel qui sera restituée pour fournir la pression motrice lors de l'expiration. Il est a noté que la paroi thoracique comprenant les côtes et les muscles intercostaux ont une tendance à générer une force en faveur d'une distention thoracique (augmentantion de volume). Inversement le tissu pulmonaire par ces propriétés elastiques a tendance à générer une force de rétraction en faveur d'un affaissement du poumon. Le système paroie thoracique - tissu pulmonaire trouve son équilibre à la Capacité Résiduelle Fonctionnelle _CRF_. La mise en série des deux compartiement forme un système décrivant le flux expiratoire qui est comparable à un circuit _LRC- électrique constitué d'une résitance, d'une inductance et d'un condensateur. Ici il n'y a pas d'inductance donc plutôt du type _RC_.
+L'équation différentielle de ce système, du flux d'air résultant $\dot{V}(t)$, s'écrit : 
+
+$$ 
+\frac{\mathrm{d}\dot{V}(t)}{\mathrm{d}t}=-\frac{\dot{V}(t)}{R_{l}C_{l}}+\frac{\dot{P}(t)}{R_{l}}
+$$ 
+
+\begin{equation}
+  \frac{\mathrm{d}\dot{V}(t)}{\mathrm{d}t}=-\frac{\dot{V}(t)}{R_{l}C_{l}}+\frac{\dot{P}(t)}{R_{l}}
+\label{AirflowProcess}
+\end{equation}
+
+
+Gas-mixing Processe :
+Les voies de conduction ne présentent pas de CO2, seul le compartiment alvéolaire est générateur de CO2 en quantité importante en raison des échanges gazeux avec les capillaires pulmonaires. Au cours de l'expiration, le gaz riche en CO2 des alvéoles se mélange au gaz pauvre en CO2 de l'espace mort. Nous supposons que ce mélange est instantané car il se produit un mélange important dans l'espace mort par turbulence et ramification des voies respiratoires [10, 13]. Les auteurs de l'articles ont écrit une équation de transport de masse pour la pression partielle de CO2 dans l'espace mort en considérant que l'espace mort initialement ne comporte pas de CO2 comme dit précédement. Le mélange du CO2 provenant du compartiment alvéolaire $p_{A}$ se fait instantanément dans le compartiment alvéolaire et augmente au fur à mesure du temps lors de l'expiration et de la vidange des alvéoles.
+L'équation différentielle de la pression partielle de CO2 dans l'espace mort en fonction du temps lors de l'expiration $p_{D}$ est la suivante :
+
+$$ 
+\frac{\mathrm{d}p_{D}(t)}{\mathrm{d}t}=\frac{-p_{D}(t)+p_{A}}{V_{D}} \ \dot{V}(t) 
+$$ 
+
+\begin{equation}
+  \frac{\mathrm{d}p_{D}(t)}{\mathrm{d}t}=\frac{-p_{D}(t)+p_{A}}{V_{D}} \ \dot{V}(t)
+\label{GasMixingProcess}
+\end{equation}
+
+Où $p_{A}$ représente la pression partielle en CO2 du compartiement alvéolaire et qui est considéré comme constante par les auteurs avec un valeur prise à 40 mmHg.
+
+
+Solution for a Step-Function Pressure Drive :
+Les équations différentielles \eqref{AirflowProcess} et \eqref{GasMixingProcess} peuvent être résolues pour donner les la fonction de $P(t)$
 
 $$ 
 p_{D}(t)=p_{A} (1-\mathrm{e}^{-\alpha} \mathrm{e}^{\alpha\mathrm{e}^{-\frac{t}{\tau}}})  
 \tag{2}
 $$ 
 
+\begin{equation}
+  p_{D}(t)=p_{A} (1-\mathrm{e}^{-\alpha} \mathrm{e}^{\alpha\mathrm{e}^{-\frac{t}{\tau}}})
+\label{eq:modèle mécanique 2}
+\end{equation}
 
 
 Le paramètre $\tau=R_{l}C_{l}$ représente la constante de temps pulmonaire. Le parmètre $\alpha$ définit par $\alpha= \frac{C_{l}\Delta P}{V_{d}} =\frac{V_{T}}{V_{D}}$ où la quantité $C_{l}\Delta P=V_{T}$ représente le volume courant (en supposant une compliance pulmonaire linéaire), donc $\alpha$ est approximativement l'inverse de la fraction de l'espace mort pulmonaire
@@ -1035,6 +1225,46 @@ La surveillance de la fréquence ventilatoire est une des recommandations utilis
 
 
 ### Enhancing ventilation detection during cardiopulmonary resuscitation by filtering chest compression artifact from the capnography waveform [@gutierrez2018enhancing]
+
+
+
+
+### Automatic Quantitative Analysis of Human Respired Carbon Dioxide Waveform for Asthma and Non-Asthma Classification Using Support Vector Machine [@singh2018automatic]
+
+Cette nouvelle étude sur la reconnaissance des patients asthmatique et non-asthmatique, se base dans le domaine temporel, sur le paramètre principal de la surface sous la courbe. Plusieurs sufraces sous la courbe sont mesurées/calculées et ainsi étudiées. Au total 5 paramètres sont étudiés les aires sous la courbes : _AR1+AR2_, _AR3_, _AR4_ et $\frac{\mathrm{d}CO_{2}}{\mathrm{d}t}$.
+Soixante treiz patients ont été inclus dont 43 étaient des patients asthmatiques et 30 non-asthmatiques. Réalisé au sein du Département des Urgences de l'Hopital de Penang en Malaisie, les enregistrements de capnographie ont été réalisé à l'aide d'un appareil, basé sur la technologie Sidestream, permettant l'échantillonage simple de la mesure du CO2 expiré en temps réel, par le biais d'une canule nasale [voir_20]. La fréquence d'échantillonnage était de 100 Hz avec une durée d'enregistrement de 2,5 minutes. 
+Un filtrage avec un un filtre à moyenne glissante a été appliqué à la courbe pour lisser cette dernière.
+
+Filtrage de la courbe par filtre à moyenne glissante : 
+$$y(p)=\frac{1}{2p+1}(y(p+q)+y(p+q-1)...+y(p-q))$$
+
+\begin{equation}
+  y(p)=\frac{1}{2p+1}(y(p+q)+y(p+q-1)...+y(p-q))
+\label{eq:moyenne glissante}
+\end{equation}
+
+Un algorithme de seuil a été adopté pour segmenter automatiquement chaque phase en sous-phases afin d'extraire les caractéristiques suggérées dans des études antérieures. Le seuil utilisé était de 4 mmHg permettant d'identifier et de limiter la plage correspondant à un cycle respiratoire. Cette méthode de seuillage a été suggérée par You et Howe [@you1994expiratory,@howe2011use] qui indiquent que le CO2 expiré doit provenir des poumons pour atteindre un niveau de 4 à 10 mmHg, ce qui correspond à une partie de la phase expiratoire ascendante. La phase expiratoire a été indentifié comme la partie ascendante du cycle respiratoire jusq'à sa valeur maximale en CO2. La phase descendante (inspiration) a été considérée entre le point maximal de CO2 jusqu'à un seuil de CO2 de 10 et 4 mmHg, toujours à l'aide de la méthode de seuillage. Les caractéristiques ont été extraites en fonction de cette segmentation de la courbe et pour chaque cycle respiratoire (cycle par cycle).
+
+
+$$A_{i}=\frac{\mathrm{d}t}{6}\sum_{j=0}^{i}(C_{j-1}(t)+4C_{j}(t)+C_{j+1}(t))$$
+Le caclul des différentes aires (_AR1_, _AR2_, _AR3_, _AR4_) sont calculté à l'aide de la formule : 
+\begin{equation}
+  A_{i}=\frac{\mathrm{d}t}{6}\sum_{j=0}^{i}(C_{j-1}(t)+4C_{j}(t)+C_{j+1}(t))
+\label{eq:ARi}
+\end{equation}
+
+Où $C(t)$ et $\mathrm{d}t$ représentent respectivement la valeur du CO2 et l'interval d'échantillonage.
+Le calcul des différentes aires est fait en moyennant les aires de 6 cycles, 1 cylce avant et 1 cycle considéré et 4 fois le cycle considéré.
+
+La méthode de sélection des caractéristiques qui a été utilisée est divisée/composée en trois catégories, à savoir une méthode intégrée (intégrative), méthode d'encapsulation ou d'emblalage (d'encapsulation), méthode de filtrage. Les methodes d'encapsulation et d'intégration interagissent avec le classificateur et incluent une interaction entre les sous-ensembles de fonctions et la sélection du modèle.
+
+En outre, ils peuvent prendre en compte les dépendances de fonctionnalités. Cependant, ces méthodes présentent certaines limitations communes, telles qu'un risque plus élevé de surajustement que les techniques de filtrage et un coût de calcul élevé.
+Contrairement à ces méthodes, la technique de filtrage s'adapte facilement à une grande feuille de données, est simple en calcul, rapide et ne dépend pas du classificateur. En outre, l'algorithme de sélection de caractéristiques ne peut être analysé qu'une seule fois et plusieurs méthodes de classificateur peuvent être évaluées.
+Par conséquent, nous avons proposé d'utiliser l'algorithme de sélection de caractéristiques basé sur les filtres présenté précédemment dans [33] pour sélectionner l'ensemble optimal de caractéristiques de signaux de CO2 permettant de différencier les condicitons d'asthme et de non-asthme.
+La technique de filtrage évalue les caractéristiques en prenant en compte les propriétés intrinsèques du signal de CO2. Il est basé sur le score des caractéristiques significatives et les fonctionnalités présentant des scores faibles sont supposées être supprimées d'un test ROC [33], qui représente une fraction des vrais positifs et des faux positifs, pour un système de classification binaire. La courbe ROC a considéré deux groupes spécifiques, asthmatique et non asthmatique, pour chaque caractéristique. Ainsi, la courbe ROC coïncide avec l’AUC diagonale (Az, 0,5), mais les caractéristiques peuvent différencier deux groupes lorsque la courbe ROC atteint le coin supérieur gauche, c’est-à-dire qu’elle est proche de 1.
+Habituellement, un AUC de 0,5, 0,7 à 0,8, 0,8 à 0,9 et plus de 0,9 préconise une discrimination qualifiée respectivement de mauvaise , acceptable, excellente et remarquable, comme le suggèrent Hosmer et Lemeshow, Ware. Ainsi, sur la base des valeurs maximale et minimale de l'AUC, les caractéristiques ont été choisies dans un but de classification.
+
+Une Méthode Statistique de classifieur supervisé de type classifieur SVM basé sur la fonction de base radiale (RBF) a été utilisé pour la classification des patients. Il utilise un hyperplan pour différencier les groupes asthmatiques et non asthmatiques en maximisant la distance par rapport aux limites de décision.
 
 
 
@@ -1310,6 +1540,7 @@ capnogram signal
 [@kelsey1962expiratory] 
 
 
+
 Site GLI _(Global Lung Function Initiative)_ :
 
               http://gligastransfer.org.au/calcs/tlco.html
@@ -1326,7 +1557,7 @@ Site GLI _(Global Lung Function Initiative)_ :
 
 --------------------------------------------------------------------------------------
 
-## Tableau 1 : Synthèse des études sur la Capnographie Standard
+## Synthèse des études sur la Capnographie Standard
 
 
 --------------------------------------------------------
@@ -1348,7 +1579,7 @@ Site GLI _(Global Lung Function Initiative)_ :
 
 --------------------------------------------------------------------------------------
 
-# Tableau 2 : Synthèse des études sur la Capnographie Standard
+## Synthèse des études sur la Capnographie Standard
 
 
 ------------------------------------------------------------------------------------------------------------------------------------
@@ -1371,7 +1602,7 @@ Site GLI _(Global Lung Function Initiative)_ :
 
 --------------------------------------------------------------------------------------
 
-# Tableau 3 : Synthèse des études sur la Capnographie Standard
+## Synthèse des études sur la Capnographie Standard
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1417,6 +1648,59 @@ you		        1994        40	      Sprio.			    S1, S2, S3, SR, AR, SD1, SD2, SD3
 
 
 \elandscape
+
+\newpage
+\blandscape
+
+--------------------------------------------------------------------------------------
+
+## Synthèse des études sur la Capnographie Standard
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                        Auteur                       Année   Effectif    Gold standard                       Caractéristiques           
+--------------------------------------------------   -----   --------   ------------------  -------------------------------------------------------
+Babik et al.[@babik2012effects]                       2012       68	      Res. & Comp.		  Pente III				                                      
+
+Blanch et al.[@blanch1994relationship]                1994		   41	      Résistance		    Pente III				                                    
+
+Brown et al.[@brown2013forced]                        2013	     20      Spiro. & TDM		    Pente III		       		                                
+ 
+Egleston et al.[@egleston1997capnography]             1997		   38	      Clinique		      Pente S1, S2 & SR			                             
+   
+Evered et al.[@evered2003can]                         2003	     12	     Spiro. & Res.		  Pente III & angle alpha			                            
+
+Hisamuddin et al.[@hisamuddin2009correlations]        2009    	 100	       DEP			      Pente II, III & angle alpha		
+
+Howe et al.[@howe2011use]                             2011        30	       DEP			      Pente II, III & angle alpha		                          
+ 
+Ioan et al.[@ioan2014frequency]                       2014         8	    Res. & Comp.		  Pente II, III, angle alpha, D1,D2                    	
+
+Kean et al.[@kean2010feature]                         2010        34	  Spiro. & clinique	  8 critères de You			                                 
+
+Kline et al.[@kline1998preliminary]                   1998	     139	  Scinti & TDM pulm	  Surface sous la courbe			                          
+  
+Krauss et al.[@krauss2005capnogram]                   2005       262	     Spiro.			      Pente II, III, EtCO2, FR, Tps Insp & expi.   	        
+
+Lopez et al.[@lopez2011capnography]                   2011        21	    Clinique		      Pente II, III, EtCO2, Tps Insp & expi., PcCO2-EtCO2	  
+
+Lukic et al.[@lukic2006novel]                         2006        5	      Clinique		      18 critères	                                             
+
+Mieloszyk et al.[@mieloszyk2014automated]             2014       139	    Clinique		      Pente III, EtCO2, Tps exp., Tps EtCO2	
+
+Mieloszyk et al.[@mieloszyk2015clustering]            2015        56	    Cliniique		      EtCO2, pente S1, S2, S3 & SR	 		                  
+
+Yaron et al.[@yaron1996utility]                       1996        48	       DEP			      Pente III				                                        
+
+You et al.[@you1994expiratory]	                      1994        40	      Sprio.			    S1, S2, S3, SR, AR, SD1, SD2, SD3	                      
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+: Synthèse des études sur la Capnographie Standard
+
+
+\elandscape
+
 
 \newpage
 
