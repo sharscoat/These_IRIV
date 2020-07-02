@@ -1,3 +1,6 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
 \documentclass[12pt,]{article}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
@@ -6,30 +9,35 @@
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
 \else % if luatex or xelatex
-  \ifxetex
-    \usepackage{mathspec}
-  \else
-    \usepackage{fontspec}
-  \fi
+  \usepackage{unicode-math}
   \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
 \fi
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
 \IfFileExists{microtype.sty}{%
-\usepackage{microtype}
+\usepackage[]{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-\usepackage[margin=1in]{geometry}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
 \usepackage{hyperref}
-\hypersetup{unicode=true,
+\hypersetup{
             pdftitle={Bibliographie\_These\_IRIV},
             pdfauthor={Sébastien HARSCOAT},
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
+\usepackage[margin=1in]{geometry}
 \usepackage{longtable,booktabs}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -39,12 +47,6 @@
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-\IfFileExists{parskip.sty}{%
-\usepackage{parskip}
-}{% else
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-}
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -59,31 +61,10 @@
 \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
 
-%%% Use protect on footnotes to avoid problems with footnotes in titles
-\let\rmarkdownfootnote\footnote%
-\def\footnote{\protect\rmarkdownfootnote}
-
-%%% Change title format to be more compact
-\usepackage{titling}
-
-% Create subtitle command for use in maketitle
-\providecommand{\subtitle}[1]{
-  \posttitle{
-    \begin{center}\large#1\end{center}
-    }
-}
-
-\setlength{\droptitle}{-2em}
-
-  \title{Bibliographie\_These\_IRIV}
-    \pretitle{\vspace{\droptitle}\centering\huge}
-  \posttitle{\par}
-    \author{Sébastien HARSCOAT}
-    \preauthor{\centering\large\emph}
-  \postauthor{\par}
-      \predate{\centering\large\emph}
-  \postdate{\par}
-    \date{5 février 2018}
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
 
 \usepackage[french]{babel}
 \usepackage[utf8]{inputenc}
@@ -95,6 +76,10 @@
 \newcommand{\elandscape}{\end{landscape}}
 \usepackage{amsmath,amsfonts,amssymb}
 \usepackage[french]{babel}
+
+\title{Bibliographie\_These\_IRIV}
+\author{Sébastien HARSCOAT}
+\date{5 février 2018}
 
 \begin{document}
 \maketitle
@@ -170,11 +155,11 @@ de capnographie et de spirométrie recueillies sur des patients.
 
 \pagebreak
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{premiere-partie---physiologie-physiopathologie-du-poumon}{%
+\hypertarget{premiuxe8re-partie---physiologie-physiopathologie-du-poumon}{%
 \section{Première Partie - Physiologie \& Physiopathologie du
-Poumon}\label{premiere-partie---physiologie-physiopathologie-du-poumon}}
+Poumon}\label{premiuxe8re-partie---physiologie-physiopathologie-du-poumon}}
 
 \hypertarget{rappel-danatomie-et-de-physiologie-respiratoire}{%
 \subsection{Rappel d'Anatomie et de Physiologie
@@ -695,8 +680,8 @@ du carré ne sont séparées que de quelques millimètres.
 
 {[}\protect\hyperlink{ref-reid1958secondary}{9}{]}
 
-\hypertarget{emphyseme}{%
-\subsubsection{Emphysème}\label{emphyseme}}
+\hypertarget{emphysuxe8me}{%
+\subsubsection{Emphysème}\label{emphysuxe8me}}
 
 ++++++++ L'emphysème pulmonaire affecte les bronchioles respiratoires,
 les canaux alvéolaires, les sacs alvéolaires et les alvéoles, qui
@@ -1011,11 +996,11 @@ sous-diagnostic de la maladie ou de diagnostics trop tardifs. (9-10).
 
 \pagebreak
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{deuxieme-partie---modele-de-poumon}{%
+\hypertarget{deuxiuxe8me-partie---moduxe8le-de-poumon}{%
 \section{Deuxième Partie - Modèle de
-Poumon}\label{deuxieme-partie---modele-de-poumon}}
+Poumon}\label{deuxiuxe8me-partie---moduxe8le-de-poumon}}
 
 \hypertarget{physiologie-pulmonaire}{%
 \subsection{Physiologie pulmonaire}\label{physiologie-pulmonaire}}
@@ -1326,9 +1311,9 @@ physiologique. En pratique, les effets favorables de ces médicaments sur
 les voies aériennes excèdent de loin les desavantages d'une hypoxémie
 modérée supplémentaire.
 
-\hypertarget{modele-mathematique-de-poumon}{%
+\hypertarget{moduxe8le-mathuxe9matique-de-poumon}{%
 \subsection{Modèle mathématique de
-poumon}\label{modele-mathematique-de-poumon}}
+poumon}\label{moduxe8le-mathuxe9matique-de-poumon}}
 
 Modèle mathématique le plus simple fréquemment utilisé est le modèle
 \emph{monocompartiemental}. Modèle connu et utilisé depuis longtemps, le
@@ -1362,11 +1347,11 @@ en calculer explicitement la solution.
 
 \pagebreak
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{troisieme-partie---capnographie}{%
+\hypertarget{troisiuxe8me-partie---capnographie}{%
 \section{Troisième Partie -
-Capnographie}\label{troisieme-partie---capnographie}}
+Capnographie}\label{troisiuxe8me-partie---capnographie}}
 
 \hypertarget{histoire-de-la-capnographie}{%
 \subsection{Histoire de la
@@ -1453,14 +1438,15 @@ en fin d'expiration (PETCO2) et de la fréquence respiratoire.
 \subsection{Technique d'enregistrement de
 capnographie}\label{technique-denregistrement-de-capnographie}}
 
-\hypertarget{detection-du-co2-expire}{%
-\subsubsection{Détection du CO2 expiré}\label{detection-du-co2-expire}}
+\hypertarget{duxe9tection-du-co2-expiruxe9}{%
+\subsubsection{Détection du CO2
+expiré}\label{duxe9tection-du-co2-expiruxe9}}
 
 Il existe différents systèmes pour détecter et analyser le CO2 expiré.
 
-\hypertarget{la-spectrometrie-de-masse-11bhavani1992capnometry}{%
+\hypertarget{la-spectromuxe9trie-de-masse-11bhavani1992capnometry}{%
 \paragraph{\texorpdfstring{La spectrométrie de masse
-(11){[}\protect\hyperlink{ref-bhavani1992capnometry}{18}{]}}{La spectrométrie de masse (11){[}18{]}}}\label{la-spectrometrie-de-masse-11bhavani1992capnometry}}
+(11){[}\protect\hyperlink{ref-bhavani1992capnometry}{18}{]}}{La spectrométrie de masse (11){[}18{]}}}\label{la-spectromuxe9trie-de-masse-11bhavani1992capnometry}}
 
 Elle est basée sur le concept de séparation des ions en fonction de leur
 poids moléculaire et de leur charge. Il existe deux types de
@@ -1485,17 +1471,17 @@ nombre « d'impacts » par 100 ms est utilisé pour déterminer la
 concentration des gaz. Cette technique permet une analyse multi gaz,
 rapide.
 
-\hypertarget{methode-colorimetrique}{%
-\paragraph{Méthode colorimétrique}\label{methode-colorimetrique}}
+\hypertarget{muxe9thode-colorimuxe9trique}{%
+\paragraph{Méthode colorimétrique}\label{muxe9thode-colorimuxe9trique}}
 
 Il s'agit d'une méthode récente peu utilisée en raison de l'absence d'un
 monitoring continu et d'affichage graphique des variations de CO2. C'est
 un système qui détecte la présence de CO2 dans un gaz à l'aide d'un
 papier filtre ou un autre révélateur sensible au pH.
 
-\hypertarget{la-spectrophotometrie-dabsorption-infrarouge}{%
+\hypertarget{la-spectrophotomuxe9trie-dabsorption-infrarouge}{%
 \paragraph{La spectrophotométrie d'absorption
-infrarouge}\label{la-spectrophotometrie-dabsorption-infrarouge}}
+infrarouge}\label{la-spectrophotomuxe9trie-dabsorption-infrarouge}}
 
 La spectrophotométrie par rayonnement infrarouge (IR) est la technique
 de capnographie actuellement la plus utilisée en médecine
@@ -1511,16 +1497,16 @@ deux cellules (une dont la concentration en CO2 est connue, l'autre dont
 la concentration reste à mesurer), il est possible de mesurer la
 concentration en CO2 du mélange.
 
-\hypertarget{systeme-danalyse-de-letco2}{%
+\hypertarget{systuxe8me-danalyse-de-letco2}{%
 \subsubsection{Système d'analyse de
-l'ETCO2}\label{systeme-danalyse-de-letco2}}
+l'ETCO2}\label{systuxe8me-danalyse-de-letco2}}
 
 On distingue deux types de système d'analyse de l'ETCO2
 (12){[}\protect\hyperlink{ref-yosefy2004end}{29}{]}.
 
-\hypertarget{systeme-non-aspiratif-mainstream}{%
+\hypertarget{systuxe8me-non-aspiratif-mainstream}{%
 \paragraph{Système non aspiratif : « Mainstream
-»}\label{systeme-non-aspiratif-mainstream}}
+»}\label{systuxe8me-non-aspiratif-mainstream}}
 
 Le système non aspiratif, mainstream, où la mesure est effectuée
 directement sur le flux gazeux du circuit respiratoire du patient,
@@ -1530,9 +1516,9 @@ temporel. L'inconvénient de ce système réside dans le fait que le
 capteur alourdit le dispositif et risque de modifier la position de la
 sonde d'intubation chez les patients en ventilation invasive.
 
-\hypertarget{systeme-aspiratrif-sidestream}{%
+\hypertarget{systuxe8me-aspiratrif-sidestream}{%
 \paragraph{Système aspiratrif : « Sidestream
-»}\label{systeme-aspiratrif-sidestream}}
+»}\label{systuxe8me-aspiratrif-sidestream}}
 
 Le système sidestream est un système aspiratif où l'échantillon de gaz
 est aspiré à débit constant à travers un tube fin pour être analysé par
@@ -1644,9 +1630,9 @@ permet l'analyse des détails d'un cycle respiratoire.
 \caption{Courbe de Capnographie Standard et ses différentes phases.}\label{fig:unnamed-chunk-5}
 \end{figure}
 
-\hypertarget{capnographie-volumetrique}{%
+\hypertarget{capnographie-volumuxe9trique}{%
 \subsubsection{Capnographie
-Volumétrique}\label{capnographie-volumetrique}}
+Volumétrique}\label{capnographie-volumuxe9trique}}
 
 La capnographie volumétrique correspond à la PCO2 mesurée et exprimée en
 fonction du volume lors de la phase d'expiration. La terminologie
@@ -1851,8 +1837,8 @@ provoquant une chute de l'EtCO2 et un aplatissement des courbes. Il est
 donc recommandé d'attendre 6 cycles respiratoires avant de confirmer
 l'intubation endotrachéale.
 
-\hypertarget{intubation-selective}{%
-\paragraph{Intubation sélective}\label{intubation-selective}}
+\hypertarget{intubation-suxe9lective}{%
+\paragraph{Intubation sélective}\label{intubation-suxe9lective}}
 
 La bronche souche droite forme un angle de 25° avec la trachée, elle est
 donc pratiquement dans son axe, ce qui explique que dans la majorité des
@@ -3374,8 +3360,8 @@ correspondant à une diminution du calibre des voies aériennes, et une
 augmentaiton du rapport entre espace mort physiologique et volume
 courant entrainant une diminution de \(\alpha\).
 
-\hypertarget{justification-du-modele}{%
-\paragraph{Justification du modèle}\label{justification-du-modele}}
+\hypertarget{justification-du-moduxe8le}{%
+\paragraph{Justification du modèle}\label{justification-du-moduxe8le}}
 
 Airflow Process : De nombreux modèles mécanistiques ont été proposés
 dans la littérature pour décrire le flux d'air expiratoire (sortant des
@@ -3964,14 +3950,14 @@ classification des patients. Il utilise un hyperplan pour différencier
 les groupes asthmatiques et non asthmatiques en maximisant la distance
 par rapport aux limites de décision.
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \hypertarget{discussion}{%
 \subsection{Discussion}\label{discussion}}
 
-\hypertarget{population-et-pathologie-etudiees}{%
+\hypertarget{population-et-pathologie-uxe9tudiuxe9es}{%
 \subsubsection{Population et Pathologie
-étudiées}\label{population-et-pathologie-etudiees}}
+étudiées}\label{population-et-pathologie-uxe9tudiuxe9es}}
 
 Patient normaux, obstructif, restrictif, fibrose. Problèmatique est
 avoir des élements de mesures qui nous permets d'analyser et d'évaluer
@@ -3994,8 +3980,8 @@ des résistances et de la compliance pulmonaire) - la perfusion
 (débit/volume, hétérogénéité de perfusion) - la diffusion des gazs
 (surface d'échange, résistances à la diffusion)
 
-\hypertarget{pretraitement}{%
-\subsubsection{Prétraitement}\label{pretraitement}}
+\hypertarget{pruxe9traitement}{%
+\subsubsection{Prétraitement}\label{pruxe9traitement}}
 
 \begin{itemize}
 \item
@@ -4025,13 +4011,13 @@ des résistances et de la compliance pulmonaire) - la perfusion
 {[}\protect\hyperlink{ref-roy2007calculating}{13}{]} : méthode de
 segmentation du capnogramme pour les différentes phases à étudier.
 
-\hypertarget{features-ou-caracteristiques-analysees}{%
+\hypertarget{features-ou-caractuxe8ristiques-analysuxe9es}{%
 \subsubsection{Features ou caractèristiques
-analysées}\label{features-ou-caracteristiques-analysees}}
+analysées}\label{features-ou-caractuxe8ristiques-analysuxe9es}}
 
-\hypertarget{methode-de-danalyse-de-la-courbe}{%
+\hypertarget{muxe9thode-de-danalyse-de-la-courbe}{%
 \subsubsection{Méthode de d'analyse de la
-courbe}\label{methode-de-danalyse-de-la-courbe}}
+courbe}\label{muxe9thode-de-danalyse-de-la-courbe}}
 
 \begin{itemize}
 \tightlist
@@ -4055,9 +4041,9 @@ courbe}\label{methode-de-danalyse-de-la-courbe}}
   nouveaux paramètres de Hjorth
 \end{itemize}
 
-\hypertarget{methode-de-classification}{%
+\hypertarget{muxe9thode-de-classification}{%
 \subsubsection{Méthode de
-Classification}\label{methode-de-classification}}
+Classification}\label{muxe9thode-de-classification}}
 
 \begin{itemize}
 \tightlist
@@ -4154,9 +4140,9 @@ Classification}\label{methode-de-classification}}
   syndrome restrictif)
 \end{itemize}
 
-\hypertarget{hypothese-physiopathologique-et-capnographie}{%
+\hypertarget{hypothuxe8se-physiopathologique-et-capnographie}{%
 \subsubsection{Hypothèse physiopathologique et
-capnographie}\label{hypothese-physiopathologique-et-capnographie}}
+capnographie}\label{hypothuxe8se-physiopathologique-et-capnographie}}
 
 Les débits réduits dans le syndrome obstructif prolongent la phase
 transitionnelle entre l'espace mort anatomique et les gaz alvéolaire car
@@ -4403,7 +4389,7 @@ classifier.
 
 \pagebreak
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \hypertarget{conclusion}{%
 \section{Conclusion}\label{conclusion}}
@@ -4418,21 +4404,21 @@ pente de la phase 3 et l'augmentation résultante de l'angle alpha (angle
 
 \pagebreak
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \pagebreak
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \hypertarget{annexes}{%
 \section{Annexes}\label{annexes}}
 
 \pagebreak
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{mots-cles}{%
-\section{Mots clés}\label{mots-cles}}
+\hypertarget{mots-cluxe9s}{%
+\section{Mots clés}\label{mots-cluxe9s}}
 
 capnography waveforms
 
@@ -4442,7 +4428,7 @@ capnogram signal
 
 \pagebreak
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \hypertarget{divers-1}{%
 \section{Divers}\label{divers-1}}
@@ -4487,11 +4473,11 @@ Site GLI \emph{(Global Lung Function Initiative)} :
 \newpage
 \begin{landscape}
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{synthese-des-etudes-sur-la-capnographie-standard}{%
+\hypertarget{synthuxe8se-des-uxe9tudes-sur-la-capnographie-standard}{%
 \subsection{Synthèse des études sur la Capnographie
-Standard}\label{synthese-des-etudes-sur-la-capnographie-standard}}
+Standard}\label{synthuxe8se-des-uxe9tudes-sur-la-capnographie-standard}}
 
 \begin{longtable}[]{@{}ccccclll@{}}
 \caption{Synthèse des études sur la Capnographie
@@ -4561,11 +4547,11 @@ You \& al.\strut
 \newpage
 \begin{landscape}
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{synthese-des-etudes-sur-la-capnographie-standard-1}{%
+\hypertarget{synthuxe8se-des-uxe9tudes-sur-la-capnographie-standard-1}{%
 \subsection{Synthèse des études sur la Capnographie
-Standard}\label{synthese-des-etudes-sur-la-capnographie-standard-1}}
+Standard}\label{synthuxe8se-des-uxe9tudes-sur-la-capnographie-standard-1}}
 
 \begin{longtable}[]{@{}ccccrrrr@{}}
 \caption{Synthèse des études sur la Capnographie
@@ -4652,11 +4638,11 @@ You \& al.\strut
 \newpage
 \begin{landscape}
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{synthese-des-etudes-sur-la-capnographie-standard-2}{%
+\hypertarget{synthuxe8se-des-uxe9tudes-sur-la-capnographie-standard-2}{%
 \subsection{Synthèse des études sur la Capnographie
-Standard}\label{synthese-des-etudes-sur-la-capnographie-standard-2}}
+Standard}\label{synthuxe8se-des-uxe9tudes-sur-la-capnographie-standard-2}}
 
 \begin{longtable}[]{@{}cllccl@{}}
 \caption{Synthèse des études sur la Capnographie
@@ -4922,11 +4908,11 @@ S1, S2, S3, SR, AR, SD1, SD2, SD3\strut
 \newpage
 \begin{landscape}
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{synthese-des-etudes-sur-la-capnographie-standard-3}{%
+\hypertarget{synthuxe8se-des-uxe9tudes-sur-la-capnographie-standard-3}{%
 \subsection{Synthèse des études sur la Capnographie
-Standard}\label{synthese-des-etudes-sur-la-capnographie-standard-3}}
+Standard}\label{synthuxe8se-des-uxe9tudes-sur-la-capnographie-standard-3}}
 
 \begin{longtable}[]{@{}cllcc@{}}
 \caption{Synthèse des études sur la Capnographie
@@ -5158,7 +5144,7 @@ S1, S2, S3, SR, AR, SD1, SD2, SD3\strut
 
 \newpage
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \hypertarget{references}{%
 \section*{References}\label{references}}
@@ -5661,6 +5647,5 @@ Heldt, and B. S. Krauss, ``Clustering of capnogram features to track
 state transitions during procedural sedation,'' in \emph{Engineering in
 medicine and biology society (embc), 2015 37th annual international
 conference of the ieee}, 2015, pp. 1699--1702.
-
 
 \end{document}
